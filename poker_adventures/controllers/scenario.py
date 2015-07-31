@@ -12,7 +12,5 @@ from ..model import scenario
 class ScenarioController(BaseController):
 
     def index(self):
-        # Return a rendered template
-        #return render('/scenario.mako')
-        # or, return a string
-        return scenario.text
+        c.main = scenario
+        return render('/scenario.mako')

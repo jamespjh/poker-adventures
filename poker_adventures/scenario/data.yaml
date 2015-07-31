@@ -1,12 +1,15 @@
-text: The Eye of the Phoenix
+name: The Eye of the Phoenix
+text: A James Bond Adventure
 rooms:
   monaco:
-    stages:
-      search:
-        time: 5
-        text: looking for the ruins
-        hand: 2C 2S 3C 3S 4D
-    text: 'A Casino'
+    text: A Casino
+    image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
+  search:
+    title: Looking for the ruins
+    text: You set out to try to find the ruins.
+    challenge:
+      time: 5
+      hand: 2C 2S 3C 3S 4D
   tropico:
     stages: {}
   skisky:

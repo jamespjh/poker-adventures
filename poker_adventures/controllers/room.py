@@ -12,11 +12,8 @@ log = logging.getLogger(__name__)
 class RoomController(BaseController):
 
     def index(self, room):
-        # Return a rendered template
-        #return render('/room.mako')
-        # or, return a string
         try:
-            room = scenario.room(room)
+            c.main = scenario.room(room)
         except KeyError:
             abort(404)
-        return room.name
+        return render('room.mako')

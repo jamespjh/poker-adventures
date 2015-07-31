@@ -1,12 +1,11 @@
+import inflection
+		
 class Room(object):
-	def __init__(self, name, text, image = None):
+	def __init__(self, name, text, title=None, image = None):
 		self.name = name
 		self.text = text
 		self.image = image
-		self.stages = {}
-		
-	def add_stage(self, stage):
-		self.stages[stage.name] = stage
-		
-	def stage(self, stage):
-		return self.stages[stage]
+
+		self.title = title
+		if not self.title:
+			self.title = inflection.titleize(name)
