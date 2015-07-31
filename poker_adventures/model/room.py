@@ -11,16 +11,16 @@ class Room(object):
 		self.title = title
 		if not self.title:
 			self.title = inflection.titleize(name)
-		
-		self.url = url(controller='room', room=self.name)
+			
 		self.exits = {}
 		
 	def add_exit(self, route, room):
 		self.exits[route] = room
 		
-	def add_challenge(self, cards,  success, fail, boni={}):
-		self.exits['Click here if you succeed.'] = success
-		self.exits['Click here if you fail.'] = fail
+	def add_challenge(self, cards, timer, success, fail, boni={}):
+		self.success= success
+		self.fail = fail
 		self.boni = boni
+		self.timer = timer
 		self.boni["Each partner"]= 1
 		self.challenge = cards

@@ -7,6 +7,7 @@ available to Controllers. This module is available to templates as 'h'.
 #from webhelpers.html.tags import checkbox, password
 
 from pylons import url
+from datetime import datetime, timedelta
 
 def card_url(card):
 	suit_name_table = {
@@ -30,3 +31,11 @@ def card_url(card):
 	
 	image_file = card_name+"_of_"+suit_name+'.png'
 	return url('/cards/'+image_file)
+	
+def now():
+	return datetime.now().strftime('%I:%M %p')
+	
+def after(minutes):
+	now = datetime.now()
+	then = now+timedelta(minutes=minutes)
+	return then.strftime('%I:%M %p')

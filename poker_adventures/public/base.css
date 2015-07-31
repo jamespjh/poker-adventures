@@ -20,3 +20,7 @@ a.target {
 img.card {
 	width: 50px;
 }
+
+div.text-overlay h1 {
+	text-align: center;
+}

@@ -52,6 +52,7 @@ class Scenario(object):
 				print challenged.get('boni')
 				room.add_challenge(
 					challenged['cards'],
+					challenged['timer'],
 					scenario.room(challenged['success']),
 					scenario.room(challenged['fail']),
 					challenged.get('boni',{})

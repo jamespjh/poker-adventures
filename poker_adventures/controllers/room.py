@@ -17,3 +17,10 @@ class RoomController(BaseController):
         except KeyError:
             abort(404)
         return render('room.mako')
+
+    def fail(self, room):
+        try:
+            c.main = scenario.room(room)
+        except KeyError:
+            abort(404)
+        return render('fail.mako')

@@ -14,9 +14,9 @@ rooms:
   search:
     title: Looking for the ruins
     text: You set out to try to find the ruins.
-    image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
+    image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
     challenge:
-      time: 5
+      timer: 5
       cards: [2C,2S,3C,3S,KD]
       success: ruins
       fail: monaco
@@ -24,6 +24,7 @@ rooms:
         'A boat': 1
   ruins:
     title: In the undersea ruins
+    image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
     exits:
       "Return to the city": monaco
   tropico:
