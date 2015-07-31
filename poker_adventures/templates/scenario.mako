@@ -3,7 +3,9 @@
 
 <div class="starts">
 <p class="start-prompt">Starting points:</p>
+<ul>
 % for room in c.main.starts:
-<p>${room.title}</p>
+<li><a class="target" href=${room.url}>${room.title}</a></li>
 % endfor
+<ul>
 </div>

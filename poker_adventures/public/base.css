@@ -11,3 +11,8 @@ body {
     background-position: center;
 	background-color: black;
 }
+
+a.target {
+	color: aqua;
+	text-decoration: none;
+}

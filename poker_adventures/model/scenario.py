@@ -35,11 +35,23 @@ class Scenario(object):
 			room= Room(name, 
 				roomd.get('text'),
 				roomd.get('title'),
-				roomd.get('image', scenario.image))
+				roomd.get('image', scenario.image)
+				)
 			scenario.add_room(room)
 		
 		for name in data['start']:
 			scenario.add_start(name)
+		
+		for name, roomd in data['rooms'].items():
+			room = scenario.room(name)
+			for route, dname in roomd.get('exits', {}).items():
+				target = scenario.room(dname)
+				room.add_exit(route, target)
+			if 'challenge' in roomd:
+				room.add_exit('Click here if you succeed', 
+					scenario.room(roomd['challenge']['success']))
+				room.add_exit('Click here if you fail', 
+					scenario.room(roomd['challenge']['fail']))
 		
 		return scenario
 			
