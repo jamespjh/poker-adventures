@@ -21,5 +21,6 @@ def make_map(config):
     # CUSTOM ROUTES HERE
     map.connect('/{room}', controller='room',action='index')
     map.connect('/{room}/{stage}', controller='stage',action='index')
-
+    map.connect('/', controller='scenario', action='index')
+     
     return map

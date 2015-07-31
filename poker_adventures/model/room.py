@@ -1,8 +1,8 @@
 class Room(object):
-	def __init__(self, name, text, background = None):
+	def __init__(self, name, text, image = None):
 		self.name = name
 		self.text = text
-		self.background = background
+		self.image = image
 		self.stages = {}
 		
 	def add_stage(self, stage):
