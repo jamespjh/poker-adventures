@@ -14,7 +14,6 @@
         <div class="text-overlay">
             <h1>${self.title()}</h1>
             ${self.body()}
-            <p>${c.main.text}</p>
         </div>
     </body>
 </html>

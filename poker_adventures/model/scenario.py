@@ -7,6 +7,7 @@ class Scenario(object):
 		self.name = name
 		self.image = image
 		self.text = text
+		self.starts = []
 		import inflection
 		self.title = inflection.titleize(name)
 		
@@ -14,7 +15,10 @@ class Scenario(object):
 		self.rooms[room.name] = room
 		
 	def room(self, room):
-		return self.rooms[room]		
+		return self.rooms[room]
+		
+	def add_start(self, name):
+		self.starts.append(self.rooms[name])
 
 	@staticmethod
 	def from_data():
@@ -22,15 +26,21 @@ class Scenario(object):
 		data = yaml.load(open(os.path.join(
 			os.path.dirname(os.path.dirname(__file__)),
 			'scenario','data.yaml')))
-		result = Scenario(data['name'], 
-						  data.get('image'), data.get('text'))
+
+		scenario = Scenario(data['name'], 
+						  data.get('image'), 
+						  data.get('text'))
+						  
 		for name, roomd in data['rooms'].items():
 			room= Room(name, 
 				roomd.get('text'),
 				roomd.get('title'),
-				roomd.get('image'))
-			result.add_room(room)
+				roomd.get('image', scenario.image))
+			scenario.add_room(room)
 		
-		return result
+		for name in data['start']:
+			scenario.add_start(name)
+		
+		return scenario
 			
 scenario = Scenario.from_data()

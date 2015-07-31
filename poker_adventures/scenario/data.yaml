@@ -1,5 +1,10 @@
 name: The Eye of the Phoenix
 text: A James Bond Adventure
+image: http://www.fansshare.com/media/content/550x298_Sam-Mendes-reveals-reason-behind-Skyfall-gunbarrel-switch-1223.jpg
+start:
+  - monaco
+  - tropico
+  - skisky
 rooms:
   monaco:
     text: A Casino
