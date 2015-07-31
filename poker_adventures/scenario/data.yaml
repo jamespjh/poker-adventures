@@ -1,0 +1,11 @@
+monaco:
+  stages:
+    search:
+      time: 5
+      text: looking for the ruins
+      hand: 2C 2S 3C 3S 4D
+  text: 'A Casino'
+tropico:
+  stages: {}
+skisky:
+  stages: {}
