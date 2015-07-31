@@ -1,0 +1,9 @@
+language: python
+script: nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZJyQlDGlZ23fbfYVQILjWOQQaDV2RQT+640qbzHDuIh4r/J58m7wyeh94qnyolzbdv1mmp2dDDSigHm1C5uGUrw2D7hxJ+PxzRlgfyGrfQquP6YOdhonxUjl+GIND0IXD1wsx4plvn6zXoRv5u+wjSWOaNz4NaYCSiLbOoVZxeX/9nfQtV5NnP81wMF40mx0Jp1cCuY802bjYrb9/YM0CW9E67HjAvQjyU+ebjsrJ4szu+qOxk+pwYJ7vZcu5X/sthDc3GOPVxBYP73VbwzVpqIPbfGk3fiCKplqCnVYDSFLjSZETfig1/QbisUnAbEVzaYrspIpCzL53YrnoIz6xSqo0Mk4YxYgdBIxzP/ZWuU7RgAxMWKJWUtX778jRo57LmTZnlqF2W2+cT/Cvdhhoz8+iXWZACpeMI9D/3IT1zWdV7uZxFTbSONyvmO8oYO3x4Hbzr/8q0sE8EVrHcD8wRLZcg2bu3xvMM2eJkKe1C4iJuJezyJTgUMUGDKCSN9jnZ6IH3Uu5V9VqSQUcMESlM+RYYCGGRcveTVXiN2nSsImV+NEipuuM0wMgj5Fth9jgK24JrD8dvW8hdazAdxriFy2DINtMgnPkVgKY2aucqjPz69Pef+dcHqPsiWJUqrqPX2nFq+T4rsmaNJ5rXH7T45UCMeEQmyXmYffcLZZ9p8=
+  app: immense-beyond-1802
+  on:
+    repo: jamespjh/poker-adventures
