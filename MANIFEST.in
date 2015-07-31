@@ -1,0 +1,3 @@
+include poker_adventures/config/deployment.ini_tmpl
+recursive-include poker_adventures/public *
+recursive-include poker_adventures/templates *
