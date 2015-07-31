@@ -48,10 +48,14 @@ class Scenario(object):
 				target = scenario.room(dname)
 				room.add_exit(route, target)
 			if 'challenge' in roomd:
-				room.add_exit('Click here if you succeed', 
-					scenario.room(roomd['challenge']['success']))
-				room.add_exit('Click here if you fail', 
-					scenario.room(roomd['challenge']['fail']))
+				challenged= roomd['challenge']
+				print challenged.get('boni')
+				room.add_challenge(
+					challenged['cards'],
+					scenario.room(challenged['success']),
+					scenario.room(challenged['fail']),
+					challenged.get('boni',{})
+				)
 		
 		return scenario
 			

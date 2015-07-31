@@ -16,9 +16,11 @@ rooms:
     text: You set out to try to find the ruins.
     challenge:
       time: 5
-      hand: 2C 2S 3C 3S 4D
+      cards: [2C,2S,3C,3S,KD]
       success: ruins
       fail: monaco
+      boni:
+        'A boat': 1
   ruins:
     title: In the undersea ruins
     exits:

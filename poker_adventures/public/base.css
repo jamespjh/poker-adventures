@@ -16,3 +16,7 @@ a.target {
 	color: aqua;
 	text-decoration: none;
 }
+
+img.card {
+	width: 50px;
+}
