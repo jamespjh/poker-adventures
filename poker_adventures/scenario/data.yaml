@@ -14,6 +14,7 @@ rooms:
   search:
     title: Looking for the ruins
     text: You set out to try to find the ruins.
+    image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
     challenge:
       time: 5
       cards: [2C,2S,3C,3S,KD]
