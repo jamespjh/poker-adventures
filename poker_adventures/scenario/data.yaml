@@ -11,6 +11,7 @@ rooms:
     image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
     exits: 
       "Set sail, looking for undersea ruins": search
+      
   search:
     title: Looking for the ruins
     text: You set out to try to find the ruins.
@@ -20,10 +21,11 @@ rooms:
       "The name of the island near the ruins": [sauros]
     success: ruins
     fail: monaco
+    
   ruins:
     title: In the undersea ruins
-    text: 
-      You are exploring the undersea ruins. 
+    text: |
+      You are exploring the undersea ruins.
       You dive around, looking for something valuable.
     image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
     timer: 5
@@ -32,6 +34,7 @@ rooms:
     fail: monaco
     boni:
       'Intrepid' : 1
+      
   temple:
     text: In an undersea temple
     exits:

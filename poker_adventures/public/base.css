@@ -3,6 +3,7 @@ div.text-overlay {
 	color: white;
 	display: inline-block;
 	border-radius: 15%;
+	width: 400px;
 }
 
 body {
