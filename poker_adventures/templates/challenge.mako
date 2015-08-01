@@ -7,13 +7,16 @@
 	% endfor
 	</div>
 	<div id="boni">
-	<p>You start with one card in your hand.</p>
-	<p>Add the following cards to your hand as bonuses:</p>
+	<p>You start with one card in your hand. 
+	Add one card per teammate and any universal bonuses.</p>
+	% if c.obstacle.boni:
+	<p>The following special abilities also apply:</p>
 	<ul>
-	% for cause, bonus in c.obstacle.boni.items():
-	<li>${cause}: ${bonus} card(s)</li>
+	% for cause in c.obstacle.boni:
+	<li>${cause}</li>
 	% endfor
 	</ul>
+	%endif
 	</div>
 	<div class="results">
 	<p>If you fail,

@@ -59,8 +59,8 @@ class Scenario(object):
 						roomd['success'],
 						roomd['fail'],
 						roomd['cards'],
-						roomd['timer'],
-						roomd.get('boni',{})
+						roomd.get('timer',5),
+						roomd.get('boni',[])
 				)
 						
 			if 'requirements' in roomd:

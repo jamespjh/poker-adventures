@@ -17,7 +17,7 @@ rooms:
     text: You set out to try to find the ruins.
     image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
     requirements:
-      "The name of your boat": [intrepid, quicksilver]
+      "The name of your boat": [steadfast, quicksilver, coracle]
       "The name of the island near the ruins": [sauros]
     success: ruins
     fail: monaco
@@ -28,12 +28,10 @@ rooms:
       You are exploring the undersea ruins.
       You dive around, looking for something valuable.
     image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
-    timer: 5
     cards: [2C,2S,3C,3S,KD]
     success: temple
     fail: monaco
-    boni:
-      'Intrepid' : 1
+    boni: [Intrepid]
       
   temple:
     title: In an undersea temple
@@ -54,11 +52,8 @@ rooms:
     fail: monaco
     success: treasure
     cards: [3C, 3S, 3D, KH, 4H]
-    timer: 5
-    boni:
-      'Violence': 1
-      'Animals': 1
-  
+    boni: [Violence, Animals]
+    
   treasure:
     title: Godzilla's tomb
     text: |
