@@ -31,7 +31,7 @@ rooms:
     cards: [2C,2S,3C,3S,KD]
     success: temple
     fail: monaco
-    boni: [Intrepid]
+    boni: [Intrepid, Sporty]
       
   temple:
     title: In an undersea temple
@@ -60,13 +60,60 @@ rooms:
       Beautiful frescos of people working alongside dinosaurs to build skyscrapers
       decorate this room.
       The dinosaurs are used like cranes, diggers, and elevators.
-      The frescos are descecrated, saying "I, the great Kraken, claim these lands 
+      The frescos are descecrated, covered with Graffiti saying "I, the great Kraken, claim these lands 
       for the waters. None shall build here again without my leave."
       There might be treasure here: tell a GM the codephrase 'Godzilla's Bones'.
     exits:
         Return to Monaco with your treasure: monaco
   
   tropico:
-    stages: {}
+    title: The island paradise of Tropico
+    exits:
+      Try to cure the Dance of the Phoenix: active
+      
+  active:
+    title: Looking for an active ingredient
+    requirements:
+      An active ingredient for the cure: ['coconut rum']
+    success: manufacture
+    fail: tropico
+    
+  manufacture:
+    title: Mass-producing the cure
+    text: |
+      You use an active ingredient in the coconut rum to cure the dance of the phoenix.
+      To make the cure work, you'll need an industrial base to mass produce it,
+      some research into how to refine the cure, and you'll need to be able to
+      select the coconut rum out from among the normal rum.
+    cards: [2C, 2S, 3C, 3D, 4H]
+    fail: tropico
+    success: cure
+    boni: [Base, Inventive, Conoisseur]
+    
+  cure:
+    title: Administering the cure
+    text: |
+      You must now all drink a tot of coconut rum, and can stop dancing.
+      You're not immune, and might be re-infected, so be careful who you touch.
+    exits:
+      Return to the beach: tropico2
+    
+  tropico2:
+    title: Back on the beach
+    exits:
+      Try to get into the caves inside the Volcano: mine  
+    
+  mine:
+    title: A blocked mine entrance
+    exits:
+      Give up and go back to the beach: tropico2
+    
   skisky:
-    stages: {}
+    title: Skisky, an Eastern Block ski resort
+    exits:
+      Climb up into the mountains: glacier
+      
+  glacier:
+    title: Hiking across a glacier
+    exits:
+      Return to the resort: skisky
