@@ -36,9 +36,41 @@ rooms:
       'Intrepid' : 1
       
   temple:
-    text: In an undersea temple
+    title: In an undersea temple
+    text: |
+      You find some mysterious runic writing.
+      You wonder what it says. The key to deciphering it is the name of
+      an ancient God.
+    fail: monaco
+    success: octofight
+    requirements:
+      "The name of an ancient God": [chthulu, quetzalcoatl, bigfoot, godzilla]
+      
+  octofight:
+    title: Attacked by Octopi!
+    text: | 
+      The runes tell you where the King of the ancient Earthfolk is entomed. 
+      But Just as you reach it, you are set upon by malevolent octopi.
+    fail: monaco
+    success: treasure
+    cards: [3C, 3S, 3D, KH, 4H]
+    timer: 5
+    boni:
+      'Violence': 1
+      'Animals': 1
+  
+  treasure:
+    title: Godzilla's tomb
+    text: |
+      Beautiful frescos of people working alongside dinosaurs to build skyscrapers
+      decorate this room.
+      The dinosaurs are used like cranes, diggers, and elevators.
+      The frescos are descecrated, saying "I, the great Kraken, claim these lands 
+      for the waters. None shall build here again without my leave."
+      There might be treasure here: tell a GM the codephrase 'Godzilla's Bones'.
     exits:
-      give up: monaco
+        Return to Monaco with your treasure: monaco
+  
   tropico:
     stages: {}
   skisky:

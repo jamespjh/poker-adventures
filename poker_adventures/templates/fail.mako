@@ -1,5 +1,5 @@
 <%inherit file="/room.mako"/>
-<p> You have failed. </p>
+<h2> You have failed. </h2>
 
 % if hasattr(c.obstacle, 'timer') and c.obstacle.timer:
 <div id="timings">

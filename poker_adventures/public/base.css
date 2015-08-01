@@ -25,3 +25,11 @@ img.card {
 div.text-overlay h1 {
 	text-align: center;
 }
+
+div.text-overlay p {
+	font-size: larger;
+}
+
+div.text-overlay li {
+	font-size: large;
+}

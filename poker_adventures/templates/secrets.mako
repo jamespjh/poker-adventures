@@ -1,10 +1,10 @@
 <%inherit file="/room.mako"/>
-<h1>Enter the required information:</h1>
+<h2>Enter the required information:</h2>
 
 ${h.form(h.url(controller='room', room=c.main.name, action='submit'), method='get')}
 <ul>
 % for prompt in c.obstacle.requirements:
-<li>${prompt}: ${h.text(prompt)}</li>
+<li>${prompt}: ${h.text(prompt, autocomplete = 'off')}</li>
 % endfor
 </ul>
 <p>${h.submit('submit', 'Submit')}</p>

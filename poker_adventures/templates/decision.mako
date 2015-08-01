@@ -1,5 +1,5 @@
 <%inherit file="/room.mako"/>
-<p class = "preamble">Choose what to do:</p>
+<h2>Choose what to do:</h2>
 <ul>
 % for route, room in c.obstacle.exits.items():
 <li>

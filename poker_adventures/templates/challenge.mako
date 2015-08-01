@@ -1,7 +1,7 @@
 <%inherit file="/room.mako"/>
 <div class="obstacle">
 	<div id="cards">
-	<p>Try to beat the following cards with a poker hand:</p>
+	<h2>Try to beat the following cards with a poker hand:</h2>
 	% for card in c.obstacle.cards:
 		<img class="card" src=${h.card_url(card)}></img>
 	% endfor
