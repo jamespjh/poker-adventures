@@ -4,6 +4,7 @@ div.text-overlay {
 	display: inline-block;
 	border-radius: 15%;
 	width: 400px;
+	font-family: Copperplate Gothic Light, copperplate, sans-serif;
 }
 
 body {
