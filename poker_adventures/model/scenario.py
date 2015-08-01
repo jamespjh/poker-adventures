@@ -1,4 +1,8 @@
 from room import Room
+from secrets import Secrets
+from decision import Decision
+from challenge import Challenge
+
 import yaml, os
 		
 class Scenario(object):
@@ -44,19 +48,29 @@ class Scenario(object):
 		
 		for name, roomd in data['rooms'].items():
 			room = scenario.room(name)
-			for route, dname in roomd.get('exits', {}).items():
-				target = scenario.room(dname)
-				room.add_exit(route, target)
-			if 'challenge' in roomd:
-				challenged= roomd['challenge']
-				print challenged.get('boni')
-				room.add_challenge(
-					challenged['cards'],
-					challenged['timer'],
-					scenario.room(challenged['success']),
-					scenario.room(challenged['fail']),
-					challenged.get('boni',{})
+			
+			if 'exits' in roomd:
+				obstacle = Decision(
+					roomd['exits']
 				)
+				
+			if 'cards' in roomd:
+				obstacle = Challenge(
+						roomd['success'],
+						roomd['fail'],
+						roomd['cards'],
+						roomd['timer'],
+						roomd.get('boni',{})
+				)
+						
+			if 'requirements' in roomd:
+				obstacle = Secrets(
+					roomd['success'],
+					roomd['fail'],
+					roomd['requirements'],
+				)
+
+			room.add_obstacle(obstacle)
 		
 		return scenario
 			

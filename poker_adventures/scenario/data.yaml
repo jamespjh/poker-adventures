@@ -15,19 +15,27 @@ rooms:
     title: Looking for the ruins
     text: You set out to try to find the ruins.
     image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
-    challenge:
-      timer: 5
-      cards: [2C,2S,3C,3S,KD]
-      success: ruins
-      fail: monaco
-      boni:
-        'A boat': 1
+    requirements:
+      "The name of your boat": [intrepid, quicksilver]
+      "The name of the island near the ruins": [sauros]
+    success: ruins
+    fail: monaco
   ruins:
     title: In the undersea ruins
-    text: You are exploring the undersea ruins.
+    text: 
+      You are exploring the undersea ruins. 
+      You dive around, looking for something valuable.
     image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
+    timer: 5
+    cards: [2C,2S,3C,3S,KD]
+    success: temple
+    fail: monaco
+    boni:
+      'Intrepid' : 1
+  temple:
+    text: In an undersea temple
     exits:
-      "Return to the city": monaco
+      give up: monaco
   tropico:
     stages: {}
   skisky:

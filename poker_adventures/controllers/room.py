@@ -11,16 +11,25 @@ log = logging.getLogger(__name__)
 
 class RoomController(BaseController):
 
-    def index(self, room):
+    def __before__(self, room):
         try:
             c.main = scenario.room(room)
+            c.obstacle = c.main.obstacle
         except KeyError:
             abort(404)
-        return render('room.mako')
+
+    def index(self, room):
+        return render(c.obstacle.template+'.mako')
 
     def fail(self, room):
-        try:
-            c.main = scenario.room(room)
-        except KeyError:
-            abort(404)
         return render('fail.mako')
+        
+    def submit(self, room):
+        for requirement, choices in c.obstacle.requirements.items():
+            if requirement not in request.params:
+                return render('fail.mako')
+            if not any(
+                [choice in request.params[requirement].lower().strip() 
+                    for choice in choices]):   
+                return render('fail.mako')
+        redirect(url(controller='room', room=c.obstacle.success, action='index'))

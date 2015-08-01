@@ -13,7 +13,7 @@
     <body>
         <div class="text-overlay">
             <h1>${self.title()}</h1>
-            ${self.body()}
+            ${next.body()}
         </div>
     </body>
 </html>
