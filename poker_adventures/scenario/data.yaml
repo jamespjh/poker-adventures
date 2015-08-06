@@ -231,53 +231,56 @@ rooms:
 			
 	active:
 		title: Looking for a cure
+		image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
+		text: what to do?
 		requirements:
 			Where do you think you can find an active ingredient: 
 				- rum
-		success: beach
-		fail: tropico
-
-	beach:
-		title: In Quarell's beach bar
-		text: |
-			...
-			But which bottles contain the special Allurium?
-		cards: [2C,2S,3C,3S,KD]
-		boni: [Conoisseur]
 		success: manufacture
 		fail: tropico
 		
 	manufacture:
 		title: Mass-producing the cure
+		image: http://www.rumgallery.com/_Media/bottling_rumbar_rum_at.jpeg
 		text: |
 			...
 		cards: [3C, 3S, 3D, KH, 4H]
-		boni: [Base, Entrepreneur]
+		boni: [Base, Entrepreneur, Conoisseur]
 		success: cured
 		fail: tropico
 
 	cured:
 		title: Drinking the cure
+		image: http://images.askmen.com/entertainment/special_feature_300/385_tuesday-trivia-shots-you-should-never-drink-after-college_flash.jpg
+		text: down the hatch - drink the rum to cure yourself
 		exits:
 			Go back to town: tropico2
 			
 	tropico2:
 		title: The Island Paradise of Tropico
+		image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
+		text: ?
 		exits:
 			Search for cure for the Dance of the Phoenix: active2
 			
 	active2:
 		title: Looking for Allurium
+		image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
+		text: not sure
 		requirements:
 			Where do you think you can find an active ingredient: 
 				- volcano
 				- lava
 				- factory
+				- laboratory
+				- lair
 		success: hike
 		fail: tropico2
 	
 	hike:
 		title: Hiking back to the volcano
+		image: https://s-media-cache-ak0.pinimg.com/736x/14/f0/e8/14f0e8f66bf4c3a21a20bc4dcdfa7597.jpg
+		text: it's tough
 		cards: [2C,2S,3C,3S,KD]
 		boni: [Intrepid]
 		success: volcano
@@ -285,6 +288,7 @@ rooms:
 		
 	volcano:
 		title: Trying to get into the volcano lair
+		image: http://vignette1.wikia.nocookie.net/gta-myths/images/2/2e/Lost_05.jpg/revision/latest?cb=20140806170051
 		text: |
 			Amid the ruins of El Chupacabra's base, you find
 			a secret entrance in the radio station. But you need
@@ -296,6 +300,7 @@ rooms:
 		
 	tunnels:
 		title: Lost in a maze of tunnels
+		image: http://hawaiioutdoorguides.com/wp-content/uploads/2011/08/Hiking-inside-volcano-lava-tube-Hawaii.jpg
 		text: |
 			...
 			Something about Quetzalcoatl to seed stuff
@@ -307,5 +312,6 @@ rooms:
 		
 	sanctum:
 		title: El Chupacabra's Laboratory
+		image: http://i.imgur.com/3vr58.jpg
 		exits:
 			Return to the beach with your prize: tropico2
