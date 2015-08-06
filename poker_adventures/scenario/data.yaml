@@ -5,145 +5,265 @@ start:
   - monaco
   - tropico
   - skisky
-rooms:
-  monaco:
-    text: A Casino
-    image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
-    exits: 
-      "Set sail, looking for undersea ruins": search
-      
-  search:
-    title: Looking for the ruins
-    text: You set out to try to find the ruins.
-    image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
-    requirements:
-      "The name of your boat": [steadfast, quicksilver, coracle]
-      "The name of the island near the ruins": [sauros]
-    success: ruins
-    fail: monaco
-    
-  ruins:
-    title: In the undersea ruins
-    text: |
-      You are exploring the undersea ruins.
-      You dive around, looking for something valuable.
-    image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
-    cards: [2C,2S,3C,3S,KD]
-    success: temple
-    fail: monaco
-    boni: [Intrepid, Sporty]
-      
-  temple:
-    title: In an undersea temple
-    text: |
-      You find some mysterious runic writing.
-      You wonder what it says. The key to deciphering it is the name of
-      an ancient God.
-    fail: monaco
-    success: octofight
-    special:
-      chthulu: octobow
-    requirements:
-      "The name of an ancient God": [chthulu, quetzalcoatl, bigfoot, godzilla]
-      
-  octobow:
-    title: Worshipped by Octopi!
-    text: |
-      The runes tell you where the King of the ancient Earthfolk is entomed. 
-      But Just as you reach it, a group of Octopuses float in, looking like they're about to attack you,
-      but when you give the name of their lord Chthulu, they cease their threats
-      and bow down in worship.
-    exits:
-      "Enter the tomb": treasure
-      
-  octofight:
-    title: Attacked by Octopi!
-    text: | 
-      The runes tell you where the King of the ancient Earthfolk is entomed. 
-      But Just as you reach it, you are set upon by malevolent octopi.
-    fail: monaco
-    success: treasure
-    cards: [3C, 3S, 3D, KH, 4H]
-    boni: [Violence, Animals]
-    
-  treasure:
-    title: Godzilla's tomb
-    text: |
-      Beautiful frescos of people working alongside dinosaurs to build skyscrapers
-      decorate this room.
-      The dinosaurs are used like cranes, diggers, and elevators.
-      The frescos are descecrated, covered with Graffiti saying "I, the great Kraken, claim these lands 
-      for the waters. None shall build here again without my leave."
-      There might be treasure here: tell a GM the codephrase 'Godzilla's Bones'.
-    exits:
-        Return to Monaco with your treasure: monaco
   
-  tropico:
-    title: The island paradise of Tropico
-    exits:
-      Try to cure the Dance of the Phoenix: active
-      
-  active:
-    title: Looking for an active ingredient
-    requirements:
-      An active ingredient for the cure: ['coconut rum']
-    success: manufacture
-    fail: tropico
-    
-  manufacture:
-    title: Mass-producing the cure
-    text: |
-      You use an active ingredient in the coconut rum to cure the dance of the phoenix.
-      To make the cure work, you'll need an industrial base to mass produce it,
-      some research into how to refine the cure, and you'll need to be able to
-      select the coconut rum out from among the normal rum.
-    cards: [2C, 2S, 3C, 3D, 4H]
-    fail: tropico
-    success: cure
-    boni: [Base, Inventive, Conoisseur]
-    
-  cure:
-    title: Administering the cure
-    text: |
-      You must now all drink a tot of coconut rum, and can stop dancing.
-      You're not immune, and might be re-infected, so be careful who you touch.
-    exits:
-      Return to the beach: tropico2
-    
-  tropico2:
-    title: Back on the beach
-    exits:
-      Try to get into the caves inside the Volcano: mine  
-    
-  mine:
-    title: A blocked mine entrance
-    exits:
-      Give up and go back to the beach: tropico2
-    
-  skisky:
-    title: Skisky, an Eastern Block ski resort
-    exits:
-      Ask the barman for a rumour: bar
-      
-  bar:
-    title: In the bar in Skisky
-    text: |
-      The bar in Skisky is busy and full of happy apres-ski drinkers.
-      You ask the barman for a pint of rumours.
-    random: [conference, rum]
-    prompt: Listen to the Barman.
-    
-  rum:
-    title: A rumour about Rum
-    exits:
-      Go back to the slopes: skisky
-      
-  conference:
-    title: A rumour about a conference
-    exits:
-      Go back to the slopes: skisky
-      
-  glacier:
-    title: Hiking across a glacier
-    exits:
-      Return to the resort: skisky
+rooms:
+
+	monaco:
+		title: The Casino Resort of Monaco
+		exits:
+			Set sail, looking for an interesting spot to go diving: marina
+			
+	marina:
+		title: In the Marina in Monaco
+		requirements:
+			The name of your yacht: [steadfast, quicksilver, coracle]
+		fail: monaco
+		success: search
+	
+	search:
+		title: At sea, looking for an interesting spot to go diving
+		requirements:
+			What are you looking for?: [ruins, temple, atlantis ]
+		fail: monaco
+		success: ruins
+		
+	ruins:
+		title: In the undersea ruins
+		text: |
+			you get to see something in the ruins that 
+			helps for the volcano quest
+		cards:  [2C,2S,3C,3S,KD]
+		boni: [Intrepid, Sporty]
+		success: temple
+		fail: monaco
+		
+	temple:
+		title: In an ancient underwater temple
+		requirements:
+			The name of an ancient God: [chthulu, quetzalcoatl, bigfoot, godzilla]
+		success: excavation
+		fail: monaco
+
+	excavation:
+		title: Excavating the ruins
+		cards: [3C, 3S, 3D, KH, 4H]
+		boni: [Base, Entrepreneur]
+		success: treasure
+		fail: monaco
+		
+	treasure:
+		title: In the Tomb of Godzilla
+		text: |
+			Beautiful frescos of people working alongside dinosaurs to build 
+			skyscrapers
+	      	decorate this room.
+	      	The dinosaurs are used like cranes, diggers, and elevators.
+	      	The frescos are descecrated, covered with Graffiti saying "I, the great 
+			Kraken, claim these lands 
+	      	for the waters. None shall build here again without my leave."
+	      	There might be treasure here: tell a GM the codephrase 'Godzilla's 
+			Bones'.
+		exits:
+			Return with your findings to the Casino: monaco
+	
+	skisky:
+		title: On the slopes of Skisky
+		exits:
+			Head inside to the bar: bar
+			
+	bar:
+		title: In the bar in Skisky
+		requirements:
+			What are you looking for?: [menki]
+		fail: rumour
+		success: trail
+		
+	rumour:
+		title: Listening to the barman
+		text: |
+			I don't know about that, but I can tell you something else interesting.
+		prompt: Listen to the barman
+		random: [beachvb, code, conference, rumski]
+		
+	beachvb:
+		title: Listening to the barman
+		text: |
+			I’m looking forward to watching the World Beach Table Football later. Them costumes don’t leave much to the imagination. Starts at 9.30pm I think.
+		exits:
+			Go back to the ski slopes: skisky
+			
+	code:
+		title: Listening to the barman
+		text: |
+			A code or chthonic number, cf numbers station Tropico 4 (eg remark that the number 741 seems to be appearing everywhere or something)
+		exits:
+			Go back to the ski slopes: skisky
+			
+	conference:
+		title: Listening to the barman
+		text: |
+			Apparently there’s some big economic conference happening over the border. Good job we don’t have to worry about all that, as we have the wise Politburo to guide us.
+		exits:
+			Go back to the ski slopes: skisky
+			
+	rumski:
+		title: Listening to the barman
+		text: |
+			We had a bottle of that Tropican rum in this pub once. Didn’t last long.
+		exits:
+			Go back to the ski slopes: skisky
+		
+	trail:
+		title: In the back room of the bar
+		exits:
+			Head out to try to find the Yeti: tracking
+			Go back to the bar: bar
+			
+	tracking:
+		title: On the trail of the Menki
+				cards:  [2C,2S,3C,3S,KD]
+		boni: [Stealth, Animals]
+		success: border
+		fail: skisky
+
+	border:
+		title: On the trail of the Menki
+		text: |
+			 You’re a bit close to the border, and sensors pick you up. Your radio crackles: "Ccchhh -- this is a restricted area. What is your callsign, agent? Ccchhh Over."
+		requirements:
+			Radio in a reassuring code name: [eagle, 007, hatstand, hammer, sickle]
+		success: accepted
+		fail: driven
+		
+	driven:
+		title: Fleeing the guards
+		exits:
+			Head back to the ski resort: Skisky
+	
+	accepted:
+		title: On the trail of the Menki
+		exits:
+			Enter the cave: cave
+			
+	cave:
+		title: In the Yeti cave
+		exits:
+			Fight the Menki: fight
+			Tame the Menki: tame
+			
+	tame:
+		title: Befriending the Menki
+		cards: [3C, 3S, 3D, KH, 4H]
+		boni: [Animals]
+		success: tamed
+		fail: retreat
+		
+	fight:
+		title: Fighting the Menki
+		cards: [3C, 3S, 3D, KH, 4H]
+		boni: [Violence]
+		success: bones
+		fail: retreat
+		
+	retreat:
+		title: Retreating from the Yeti
+		exits:
+			Head back to the ski resort: Skisky
+	
+	bones:
+		title: Exploring the cave
+		text: |
+			Get some allurium. Bigfoot's bonus
+		exits:
+			Head back to the ski resort: Skisky
+	
+	tamed:
+		title: Returning with a Yeti
+		exits:
+			Head back to the ski resort: Skisky
+			
+	tropico:
+		title: The Island Paradise of Tropico
+		exits:
+			Search for cure an active ingredient: active
+			
+	active:
+		title: Looking for a cure
+		requirements:
+			Where do you think you can find an active ingredient: 
+				- rum
+		success: beach
+		fail: tropico
+
+	beach:
+		title: In Quarell's beach bar
+		text: |
+			...
+			But which bottles contain the special Allurium?
+		cards: [2C,2S,3C,3S,KD]
+		boni: [Conoisseur]
+		success: manufacture
+		fail: tropico
+		
+	manufacture:
+		title: Mass-producing the cure
+		text: |
+			...
+		cards: [3C, 3S, 3D, KH, 4H]
+		boni: [Base, Entrepreneur]
+		success: cured
+		fail: tropico
+
+	cured:
+		title: Drinking the cure
+		exits:
+			Go back to town: tropico2
+			
+	tropico2:
+		title: The Island Paradise of Tropico
+		exits:
+			Search for cure for the Dance of the Phoenix: active2
+			
+	active2:
+		title: Looking for Allurium
+		requirements:
+			Where do you think you can find an active ingredient: 
+				- volcano
+				- lava
+				- factory
+		success: hike
+		fail: tropico2
+	
+	hike:
+		title: Hiking back to the volcano
+		cards: [2C,2S,3C,3S,KD]
+		boni: [Intrepid]
+		success: volcano
+		fail: tropico2
+		
+	volcano:
+		title: Trying to get into the volcano lair
+		text: |
+			Amid the ruins of El Chupacabra's base, you find
+			a secret entrance in the radio station. But you need
+			a code for the door.
+		requirements:
+			The code to get into the base: 741
+		success: tunnels
+		fail: tropico2
+		
+	tunnels:
+		title: Lost in a maze of tunnels
+		text: |
+			...
+			Something about Quetzalcoatl to seed stuff
+			You try to follow the scent of coconut through the tunnels.
+		boni: [Conoisseur, Stealth]
+		success: sanctum
+		fail: tropico2
+		cards:  [3C, 3S, 3D, KH, 4H]
+		
+	sanctum:
+		title: El Chupacabra's Laboratory
+		exits:
+			Return to the beach with your prize: tropico2

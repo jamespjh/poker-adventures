@@ -1,0 +1,151 @@
+name: The Eye of the Phoenix
+text: A James Bond Adventure
+image: http://www.fansshare.com/media/content/550x298_Sam-Mendes-reveals-reason-behind-Skyfall-gunbarrel-switch-1223.jpg
+start:
+  - monaco
+  - tropico
+  - skisky
+  
+rooms:
+
+  monaco:
+    text: A Casino
+    image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
+    exits: 
+      "Set sail, looking for undersea ruins": search
+      
+  search:
+    title: Looking for the ruins
+    text: You set out to try to find the ruins.
+    image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
+    requirements:
+      "The name of your boat": [steadfast, quicksilver, coracle]
+      "The name of the island near the ruins": [sauros]
+    success: ruins
+    fail: monaco
+    
+  ruins:
+    title: In the undersea ruins
+    text: |
+      You are exploring the undersea ruins.
+      You dive around, looking for something valuable.
+    image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
+    cards: [2C,2S,3C,3S,KD]
+    success: temple
+    fail: monaco
+    boni: [Intrepid, Sporty]
+      
+  temple:
+    title: In an undersea temple
+    text: |
+      You find some mysterious runic writing.
+      You wonder what it says. The key to deciphering it is the name of
+      an ancient God.
+    fail: monaco
+    success: octofight
+    special:
+      chthulu: octobow
+    requirements:
+      "The name of an ancient God": [chthulu, quetzalcoatl, bigfoot, godzilla]
+      
+  octobow:
+    title: Worshipped by Octopi!
+    text: |
+      The runes tell you where the King of the ancient Earthfolk is entomed. 
+      But Just as you reach it, a group of Octopuses float in, looking like they're about to attack you,
+      but when you give the name of their lord Chthulu, they cease their threats
+      and bow down in worship.
+    exits:
+      "Enter the tomb": treasure
+      
+  octofight:
+    title: Attacked by Octopi!
+    text: | 
+      The runes tell you where the King of the ancient Earthfolk is entomed. 
+      But Just as you reach it, you are set upon by malevolent octopi.
+    fail: monaco
+    success: treasure
+    cards: [3C, 3S, 3D, KH, 4H]
+    boni: [Violence, Animals]
+    
+  treasure:
+    title: Godzilla's tomb
+    text: |
+      Beautiful frescos of people working alongside dinosaurs to build skyscrapers
+      decorate this room.
+      The dinosaurs are used like cranes, diggers, and elevators.
+      The frescos are descecrated, covered with Graffiti saying "I, the great Kraken, claim these lands 
+      for the waters. None shall build here again without my leave."
+      There might be treasure here: tell a GM the codephrase 'Godzilla's Bones'.
+    exits:
+        Return to Monaco with your treasure: monaco
+  
+  tropico:
+    title: The island paradise of Tropico
+    exits:
+      Try to cure the Dance of the Phoenix: active
+      
+  active:
+    title: Looking for an active ingredient
+    requirements:
+      An active ingredient for the cure: ['coconut rum']
+    success: manufacture
+    fail: tropico
+    
+  manufacture:
+    title: Mass-producing the cure
+    text: |
+      You use an active ingredient in the coconut rum to cure the dance of the phoenix.
+      To make the cure work, you'll need an industrial base to mass produce it,
+      some research into how to refine the cure, and you'll need to be able to
+      select the coconut rum out from among the normal rum.
+    cards: [2C, 2S, 3C, 3D, 4H]
+    fail: tropico
+    success: cure
+    boni: [Base, Inventive, Conoisseur]
+    
+  cure:
+    title: Administering the cure
+    text: |
+      You must now all drink a tot of coconut rum, and can stop dancing.
+      You're not immune, and might be re-infected, so be careful who you touch.
+    exits:
+      Return to the beach: tropico2
+    
+  tropico2:
+    title: Back on the beach
+    exits:
+      Try to get into the caves inside the Volcano: mine  
+    
+  mine:
+    title: A blocked mine entrance
+    exits:
+      Give up and go back to the beach: tropico2
+    
+  skisky:
+    title: Skisky, an Eastern Block ski resort
+    exits:
+      Ask the barman for a rumour: bar
+      
+  bar:
+    title: In the bar in Skisky
+    text: |
+      The bar in Skisky is busy and full of happy apres-ski drinkers.
+      You ask the barman for a pint of rumours.
+    random: [conference, rum]
+    prompt: Listen to the Barman.
+    
+  rum:
+    title: A rumour about Rum
+    exits:
+      Go back to the slopes: skisky
+      
+  conference:
+    title: A rumour about a conference
+    exits:
+      Go back to the slopes: skisky
+      
+  glacier:
+    title: Hiking across a glacier
+    exits:
+      Return to the resort: skisky

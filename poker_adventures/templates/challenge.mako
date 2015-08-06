@@ -8,7 +8,8 @@
 	</div>
 	<div id="boni">
 	<p>You start with one card in your hand. 
-	Add one card per teammate and any universal bonuses.</p>
+	Add one card per teammate and any universal bonuses.
+	If you've already succeeded in this challenge, there's no need to check again.</p>
 	% if c.obstacle.boni:
 	<p>The following special abilities also apply:</p>
 	<ul>
