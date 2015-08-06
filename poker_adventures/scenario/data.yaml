@@ -79,11 +79,15 @@ rooms:
 	
 	skisky:
 		title: On the slopes of Skisky
+		image: http://www.mayrhofenonline.com/wp-content/uploads/2014/01/yeti2.jpg
+		text: It's cold outside, want to go in for a drink?
 		exits:
 			Head inside to the bar: bar
 			
 	bar:
 		title: In the bar in Skisky
+		image: https://www.flickr.com/photos/todpolson/1512406310
+		text: The barman is a local. Fancy a chat?
 		requirements:
 			What are you looking for?: [menki]
 		fail: rumour
@@ -91,6 +95,7 @@ rooms:
 		
 	rumour:
 		title: Listening to the barman
+		image: https://www.flickr.com/photos/todpolson/1512406310
 		text: |
 			I don't know about that, but I can tell you something else interesting.
 		prompt: Listen to the barman
@@ -98,6 +103,7 @@ rooms:
 		
 	beachvb:
 		title: Listening to the barman
+		image: https://www.flickr.com/photos/todpolson/1512406310
 		text: |
 			I’m looking forward to watching the World Beach Table Football later. Them costumes don’t leave much to the imagination. Starts at 9.30pm I think.
 		exits:
@@ -105,6 +111,7 @@ rooms:
 			
 	code:
 		title: Listening to the barman
+		image: https://www.flickr.com/photos/todpolson/1512406310
 		text: |
 			A code or chthonic number, cf numbers station Tropico 4 (eg remark that the number 741 seems to be appearing everywhere or something)
 		exits:
@@ -112,6 +119,7 @@ rooms:
 			
 	conference:
 		title: Listening to the barman
+		image: https://www.flickr.com/photos/todpolson/1512406310
 		text: |
 			Apparently there’s some big economic conference happening over the border. Good job we don’t have to worry about all that, as we have the wise Politburo to guide us.
 		exits:
@@ -119,6 +127,7 @@ rooms:
 			
 	rumski:
 		title: Listening to the barman
+		image: https://www.flickr.com/photos/todpolson/1512406310
 		text: |
 			We had a bottle of that Tropican rum in this pub once. Didn’t last long.
 		exits:
@@ -126,12 +135,16 @@ rooms:
 		
 	trail:
 		title: In the back room of the bar
+		text: oh you know about the Menki! Tells you where they were last seen.
+		image: http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/1/4/1325694461242/landscape-covered-in-snow-001.jpg
 		exits:
-			Head out to try to find the Yeti: tracking
+			Head out to try to find the Menki: tracking
 			Go back to the bar: bar
 			
 	tracking:
 		title: On the trail of the Menki
+		image: https://markerhunter.files.wordpress.com/2010/02/manassas-14-feb-10-004.jpg
+		text: it's hard
 				cards:  [2C,2S,3C,3S,KD]
 		boni: [Stealth, Animals]
 		success: border
@@ -139,6 +152,7 @@ rooms:
 
 	border:
 		title: On the trail of the Menki
+		image: https://s-media-cache-ak0.pinimg.com/originals/0e/1b/61/0e1b61f70c72b6ad010887eaca2263db.jpg
 		text: |
 			 You’re a bit close to the border, and sensors pick you up. Your radio crackles: "Ccchhh -- this is a restricted area. What is your callsign, agent? Ccchhh Over."
 		requirements:
@@ -148,22 +162,30 @@ rooms:
 		
 	driven:
 		title: Fleeing the guards
+		image: http://www.globaltimes.cn/Portals/0/attachment/2011/07a46089-440c-4e25-b926-a1684c1d8212.jpeg
+		text: oops
 		exits:
 			Head back to the ski resort: Skisky
 	
 	accepted:
 		title: On the trail of the Menki
+		image: http://www.themoscowtimes.com/upload/iblock/e9c/fur.jpg
+		text: it's dark and there are strange noises
 		exits:
 			Enter the cave: cave
 			
 	cave:
 		title: In the Yeti cave
+		image: http://img08.deviantart.net/9c81/i/2012/034/b/9/deeper_inside_shadowtooth_cave_by_gregg4x-d4okclg.jpg
+		text: decide
 		exits:
 			Fight the Menki: fight
 			Tame the Menki: tame
 			
 	tame:
 		title: Befriending the Menki
+		image: https://nose4news.files.wordpress.com/2009/03/yeti2.jpg?w=500
+		text: here menki
 		cards: [3C, 3S, 3D, KH, 4H]
 		boni: [Animals]
 		success: tamed
@@ -171,6 +193,8 @@ rooms:
 		
 	fight:
 		title: Fighting the Menki
+		image: http://magazin.amboss-mag.de/wp-content/uploads/2011/12/203091_103_snowbeast_scebig_02.jpg
+		text: maybe this was not such a great idea!
 		cards: [3C, 3S, 3D, KH, 4H]
 		boni: [Violence]
 		success: bones
@@ -178,11 +202,14 @@ rooms:
 		
 	retreat:
 		title: Retreating from the Yeti
+		image: http://www.apk20.com/image/icon-43351
+		text: RUN!
 		exits:
 			Head back to the ski resort: Skisky
 	
 	bones:
 		title: Exploring the cave
+		image: https://s-media-cache-ak0.pinimg.com/736x/ab/77/0c/ab770c4d084f3225d2e1a97f2ac0e988.jpg
 		text: |
 			Get some allurium. Bigfoot's bonus
 		exits:
@@ -190,11 +217,15 @@ rooms:
 	
 	tamed:
 		title: Returning with a Yeti
+		image: http://i.kinja-img.com/gawker-media/image/upload/s--mGNM_dLd--/c_fit,fl_progressive,q_80,w_636/17keuu08mrr21jpg.jpg
+		text: peti
 		exits:
 			Head back to the ski resort: Skisky
 			
 	tropico:
 		title: The Island Paradise of Tropico
+		image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
+		text: illness - Dance of the Phoenix
 		exits:
 			Search for cure an active ingredient: active
 			
