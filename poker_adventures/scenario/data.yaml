@@ -7,311 +7,310 @@ start:
   - skisky
   
 rooms:
+    monaco:
+        title: The Casino Resort of Monaco
+        text: Cherie LaFigure's Stylish Casino
+        image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
+        exits:
+            Set sail, looking for an interesting spot to go diving: marina
+            
+    marina:
+        title: In the Marina in Monaco
+        image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
+        text: You'll nead a boat...
+        requirements:
+            The name of your yacht: [steadfast, quicksilver, coracle]
+        fail: monaco
+        success: search
+    
+    search:
+        title: At sea, looking for an interesting spot to go diving
+        text: Open Water.
+        image: http://trailers.apple.com/trailers/lions_gate/open_water/images/land_image.jpg
+        requirements:
+            What are you looking for?: [ruins, temple, atlantis, cthulhu, godzilla, kraken ]
+        fail: monaco
+        success: ruins
+        
+    ruins:
+        title: In the undersea ruins
+        text: |
+            you get to see something in the ruins that 
+            helps for the volcano quest actually it's about Menki.
+        image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
+        cards:  [2C,2S,3C,3S,KD]
+        boni: [Intrepid, Sporty]
+        success: temple
+        fail: monaco
+        
+    temple:
+        title: In an ancient underwater temple
+        image: http://41.media.tumblr.com/1e09e9fee3e00a89869a889b11e4fc9f/tumblr_n2ukklxnH21qjw5gto3_1280.jpg
+        requirements:
+            The name of an ancient God: [chthulu, quetzalcoatl, quetzlcoatl, bigfoot, godzilla]
+        success: excavation
+        fail: monaco
 
-	monaco:
-		title: The Casino Resort of Monaco
-		text: Cherie LaFigure's Stylish Casino
-		image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
-		exits:
-			Set sail, looking for an interesting spot to go diving: marina
-			
-	marina:
-		title: In the Marina in Monaco
-		image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
-		text: You'll nead a boat...
-		requirements:
-			The name of your yacht: [steadfast, quicksilver, coracle]
-		fail: monaco
-		success: search
-	
-	search:
-		title: At sea, looking for an interesting spot to go diving
-		text: Open Water.
-		image: http://trailers.apple.com/trailers/lions_gate/open_water/images/land_image.jpg
-		requirements:
-			What are you looking for?: [ruins, temple, atlantis, cthulhu, godzilla, kraken ]
-		fail: monaco
-		success: ruins
-		
-	ruins:
-		title: In the undersea ruins
-		text: |
-			you get to see something in the ruins that 
-			helps for the volcano quest actually it's about Menki.
-		image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
-		cards:  [2C,2S,3C,3S,KD]
-		boni: [Intrepid, Sporty]
-		success: temple
-		fail: monaco
-		
-	temple:
-		title: In an ancient underwater temple
-		image: http://41.media.tumblr.com/1e09e9fee3e00a89869a889b11e4fc9f/tumblr_n2ukklxnH21qjw5gto3_1280.jpg
-		requirements:
-			The name of an ancient God: [chthulu, quetzalcoatl, quetzlcoatl, bigfoot, godzilla]
-		success: excavation
-		fail: monaco
+    excavation:
+        title: Excavating the ruins
+        text: this is a big operation
+        image: http://www.waterencyclopedia.com/images/wsci_01_img0031.jpg
+        cards: [3C, 3S, 3D, KH, 4H]
+        boni: [Base, Entrepreneur]
+        success: treasure
+        fail: monaco
+        
+    treasure:
+        title: In the Tomb of Godzilla
+        image: https://emilypothast.files.wordpress.com/2008/11/gurney-dinosaur-parade.jpg
+        text: |
+            Beautiful frescos of people working alongside dinosaurs to build 
+            skyscrapers
+            decorate this room.
+            The dinosaurs are used like cranes, diggers, and elevators.
+            The frescos are descecrated, covered with Graffiti saying "I, the great 
+            Kraken, claim these lands 
+            for the waters. None shall build here again without my leave."
+            There might be treasure here: tell a GM the codephrase 'Godzilla's 
+            Bones'.
+        exits:
+            Return with your findings to the Casino: monaco
+    
+    skisky:
+        title: On the slopes of Skisky
+        image: http://www.mayrhofenonline.com/wp-content/uploads/2014/01/yeti2.jpg
+        text: It's cold outside, want to go in for a drink?
+        exits:
+            Head inside to the bar: bar
+            
+    bar:
+        title: In the bar in Skisky
+        image: https://www.flickr.com/photos/todpolson/1512406310
+        text: The barman is a local. Fancy a chat?
+        requirements:
+            What are you looking for?: [menki]
+        fail: rumour
+        success: trail
+        
+    rumour:
+        title: Listening to the barman
+        image: https://www.flickr.com/photos/todpolson/1512406310
+        text: |
+            I don't know about that, but I can tell you something else interesting.
+        prompt: Listen to the barman
+        random: [beachvb, code, conference, rumski]
+        
+    beachvb:
+        title: Listening to the barman
+        image: https://www.flickr.com/photos/todpolson/1512406310
+        text: |
+            I’m looking forward to watching the World Beach Table Football later. Them costumes don’t leave much to the imagination. Starts at 9.30pm I think.
+        exits:
+            Go back to the ski slopes: skisky
+            
+    code:
+        title: Listening to the barman
+        image: https://www.flickr.com/photos/todpolson/1512406310
+        text: |
+            A code or chthonic number, cf numbers station Tropico 4 (eg remark that the number 741 seems to be appearing everywhere or something)
+        exits:
+            Go back to the ski slopes: skisky
+            
+    conference:
+        title: Listening to the barman
+        image: https://www.flickr.com/photos/todpolson/1512406310
+        text: |
+            Apparently there’s some big economic conference happening over the border. Good job we don’t have to worry about all that, as we have the wise Politburo to guide us.
+        exits:
+            Go back to the ski slopes: skisky
+            
+    rumski:
+        title: Listening to the barman
+        image: https://www.flickr.com/photos/todpolson/1512406310
+        text: |
+            We had a bottle of that Tropican rum in this pub once. Didn’t last long.
+        exits:
+            Go back to the ski slopes: skisky
+        
+    trail:
+        title: In the back room of the bar
+        text: oh you know about the Menki! Tells you where they were last seen.
+        image: http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/1/4/1325694461242/landscape-covered-in-snow-001.jpg
+        exits:
+            Head out to try to find the Menki: tracking
+            Go back to the bar: bar
+            
+    tracking:
+        title: On the trail of the Menki
+        image: https://markerhunter.files.wordpress.com/2010/02/manassas-14-feb-10-004.jpg
+        text: it's hard
+        cards:  [2C,2S,3C,3S,KD]
+        boni: [Stealth, Animals]
+        success: border
+        fail: skisky
 
-	excavation:
-		title: Excavating the ruins
-		text: this is a big operation
-		image: http://www.waterencyclopedia.com/images/wsci_01_img0031.jpg
-		cards: [3C, 3S, 3D, KH, 4H]
-		boni: [Base, Entrepreneur]
-		success: treasure
-		fail: monaco
-		
-	treasure:
-		title: In the Tomb of Godzilla
-		image: https://emilypothast.files.wordpress.com/2008/11/gurney-dinosaur-parade.jpg
-		text: |
-			Beautiful frescos of people working alongside dinosaurs to build 
-			skyscrapers
-	      	decorate this room.
-	      	The dinosaurs are used like cranes, diggers, and elevators.
-	      	The frescos are descecrated, covered with Graffiti saying "I, the great 
-			Kraken, claim these lands 
-	      	for the waters. None shall build here again without my leave."
-	      	There might be treasure here: tell a GM the codephrase 'Godzilla's 
-			Bones'.
-		exits:
-			Return with your findings to the Casino: monaco
-	
-	skisky:
-		title: On the slopes of Skisky
-		image: http://www.mayrhofenonline.com/wp-content/uploads/2014/01/yeti2.jpg
-		text: It's cold outside, want to go in for a drink?
-		exits:
-			Head inside to the bar: bar
-			
-	bar:
-		title: In the bar in Skisky
-		image: https://www.flickr.com/photos/todpolson/1512406310
-		text: The barman is a local. Fancy a chat?
-		requirements:
-			What are you looking for?: [menki]
-		fail: rumour
-		success: trail
-		
-	rumour:
-		title: Listening to the barman
-		image: https://www.flickr.com/photos/todpolson/1512406310
-		text: |
-			I don't know about that, but I can tell you something else interesting.
-		prompt: Listen to the barman
-		random: [beachvb, code, conference, rumski]
-		
-	beachvb:
-		title: Listening to the barman
-		image: https://www.flickr.com/photos/todpolson/1512406310
-		text: |
-			I’m looking forward to watching the World Beach Table Football later. Them costumes don’t leave much to the imagination. Starts at 9.30pm I think.
-		exits:
-			Go back to the ski slopes: skisky
-			
-	code:
-		title: Listening to the barman
-		image: https://www.flickr.com/photos/todpolson/1512406310
-		text: |
-			A code or chthonic number, cf numbers station Tropico 4 (eg remark that the number 741 seems to be appearing everywhere or something)
-		exits:
-			Go back to the ski slopes: skisky
-			
-	conference:
-		title: Listening to the barman
-		image: https://www.flickr.com/photos/todpolson/1512406310
-		text: |
-			Apparently there’s some big economic conference happening over the border. Good job we don’t have to worry about all that, as we have the wise Politburo to guide us.
-		exits:
-			Go back to the ski slopes: skisky
-			
-	rumski:
-		title: Listening to the barman
-		image: https://www.flickr.com/photos/todpolson/1512406310
-		text: |
-			We had a bottle of that Tropican rum in this pub once. Didn’t last long.
-		exits:
-			Go back to the ski slopes: skisky
-		
-	trail:
-		title: In the back room of the bar
-		text: oh you know about the Menki! Tells you where they were last seen.
-		image: http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/1/4/1325694461242/landscape-covered-in-snow-001.jpg
-		exits:
-			Head out to try to find the Menki: tracking
-			Go back to the bar: bar
-			
-	tracking:
-		title: On the trail of the Menki
-		image: https://markerhunter.files.wordpress.com/2010/02/manassas-14-feb-10-004.jpg
-		text: it's hard
-				cards:  [2C,2S,3C,3S,KD]
-		boni: [Stealth, Animals]
-		success: border
-		fail: skisky
+    border:
+        title: On the trail of the Menki
+        image: https://s-media-cache-ak0.pinimg.com/originals/0e/1b/61/0e1b61f70c72b6ad010887eaca2263db.jpg
+        text: |
+             You’re a bit close to the border, and sensors pick you up. Your radio crackles: "Ccchhh -- this is a restricted area. What is your callsign, agent? Ccchhh Over."
+        requirements:
+            Radio in a reassuring code name: [eagle, 007, hatstand, hammer, sickle]
+        success: accepted
+        fail: driven
+        
+    driven:
+        title: Fleeing the guards
+        image: http://www.globaltimes.cn/Portals/0/attachment/2011/07a46089-440c-4e25-b926-a1684c1d8212.jpeg
+        text: oops
+        exits:
+            Head back to the ski resort: Skisky
+    
+    accepted:
+        title: On the trail of the Menki
+        image: http://www.themoscowtimes.com/upload/iblock/e9c/fur.jpg
+        text: it's dark and there are strange noises
+        exits:
+            Enter the cave: cave
+            
+    cave:
+        title: In the Yeti cave
+        image: http://img08.deviantart.net/9c81/i/2012/034/b/9/deeper_inside_shadowtooth_cave_by_gregg4x-d4okclg.jpg
+        text: decide
+        exits:
+            Fight the Menki: fight
+            Tame the Menki: tame
+            
+    tame:
+        title: Befriending the Menki
+        image: https://nose4news.files.wordpress.com/2009/03/yeti2.jpg?w=500
+        text: here menki
+        cards: [3C, 3S, 3D, KH, 4H]
+        boni: [Animals]
+        success: tamed
+        fail: retreat
+        
+    fight:
+        title: Fighting the Menki
+        image: http://magazin.amboss-mag.de/wp-content/uploads/2011/12/203091_103_snowbeast_scebig_02.jpg
+        text: maybe this was not such a great idea!
+        cards: [3C, 3S, 3D, KH, 4H]
+        boni: [Violence]
+        success: bones
+        fail: retreat
+        
+    retreat:
+        title: Retreating from the Yeti
+        image: http://www.apk20.com/image/icon-43351
+        text: RUN!
+        exits:
+            Head back to the ski resort: Skisky
+    
+    bones:
+        title: Exploring the cave
+        image: https://s-media-cache-ak0.pinimg.com/736x/ab/77/0c/ab770c4d084f3225d2e1a97f2ac0e988.jpg
+        text: |
+            Get some allurium. Bigfoot's bonus
+        exits:
+            Head back to the ski resort: Skisky
+    
+    tamed:
+        title: Returning with a Yeti
+        image: http://i.kinja-img.com/gawker-media/image/upload/s--mGNM_dLd--/c_fit,fl_progressive,q_80,w_636/17keuu08mrr21jpg.jpg
+        text: peti
+        exits:
+            Head back to the ski resort: Skisky
+            
+    tropico:
+        title: The Island Paradise of Tropico
+        image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
+        text: illness - Dance of the Phoenix
+        exits:
+            Search for cure an active ingredient: active
+            
+    active:
+        title: Looking for a cure
+        image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
+        text: what to do?
+        requirements:
+            Where do you think you can find an active ingredient: 
+                - rum
+        success: manufacture
+        fail: tropico
+        
+    manufacture:
+        title: Mass-producing the cure
+        image: http://www.rumgallery.com/_Media/bottling_rumbar_rum_at.jpeg
+        text: |
+            ...
+        cards: [3C, 3S, 3D, KH, 4H]
+        boni: [Base, Entrepreneur, Conoisseur]
+        success: cured
+        fail: tropico
 
-	border:
-		title: On the trail of the Menki
-		image: https://s-media-cache-ak0.pinimg.com/originals/0e/1b/61/0e1b61f70c72b6ad010887eaca2263db.jpg
-		text: |
-			 You’re a bit close to the border, and sensors pick you up. Your radio crackles: "Ccchhh -- this is a restricted area. What is your callsign, agent? Ccchhh Over."
-		requirements:
-			Radio in a reassuring code name: [eagle, 007, hatstand, hammer, sickle]
-		success: accepted
-		fail: driven
-		
-	driven:
-		title: Fleeing the guards
-		image: http://www.globaltimes.cn/Portals/0/attachment/2011/07a46089-440c-4e25-b926-a1684c1d8212.jpeg
-		text: oops
-		exits:
-			Head back to the ski resort: Skisky
-	
-	accepted:
-		title: On the trail of the Menki
-		image: http://www.themoscowtimes.com/upload/iblock/e9c/fur.jpg
-		text: it's dark and there are strange noises
-		exits:
-			Enter the cave: cave
-			
-	cave:
-		title: In the Yeti cave
-		image: http://img08.deviantart.net/9c81/i/2012/034/b/9/deeper_inside_shadowtooth_cave_by_gregg4x-d4okclg.jpg
-		text: decide
-		exits:
-			Fight the Menki: fight
-			Tame the Menki: tame
-			
-	tame:
-		title: Befriending the Menki
-		image: https://nose4news.files.wordpress.com/2009/03/yeti2.jpg?w=500
-		text: here menki
-		cards: [3C, 3S, 3D, KH, 4H]
-		boni: [Animals]
-		success: tamed
-		fail: retreat
-		
-	fight:
-		title: Fighting the Menki
-		image: http://magazin.amboss-mag.de/wp-content/uploads/2011/12/203091_103_snowbeast_scebig_02.jpg
-		text: maybe this was not such a great idea!
-		cards: [3C, 3S, 3D, KH, 4H]
-		boni: [Violence]
-		success: bones
-		fail: retreat
-		
-	retreat:
-		title: Retreating from the Yeti
-		image: http://www.apk20.com/image/icon-43351
-		text: RUN!
-		exits:
-			Head back to the ski resort: Skisky
-	
-	bones:
-		title: Exploring the cave
-		image: https://s-media-cache-ak0.pinimg.com/736x/ab/77/0c/ab770c4d084f3225d2e1a97f2ac0e988.jpg
-		text: |
-			Get some allurium. Bigfoot's bonus
-		exits:
-			Head back to the ski resort: Skisky
-	
-	tamed:
-		title: Returning with a Yeti
-		image: http://i.kinja-img.com/gawker-media/image/upload/s--mGNM_dLd--/c_fit,fl_progressive,q_80,w_636/17keuu08mrr21jpg.jpg
-		text: peti
-		exits:
-			Head back to the ski resort: Skisky
-			
-	tropico:
-		title: The Island Paradise of Tropico
-		image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
-		text: illness - Dance of the Phoenix
-		exits:
-			Search for cure an active ingredient: active
-			
-	active:
-		title: Looking for a cure
-		image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
-		text: what to do?
-		requirements:
-			Where do you think you can find an active ingredient: 
-				- rum
-		success: manufacture
-		fail: tropico
-		
-	manufacture:
-		title: Mass-producing the cure
-		image: http://www.rumgallery.com/_Media/bottling_rumbar_rum_at.jpeg
-		text: |
-			...
-		cards: [3C, 3S, 3D, KH, 4H]
-		boni: [Base, Entrepreneur, Conoisseur]
-		success: cured
-		fail: tropico
-
-	cured:
-		title: Drinking the cure
-		image: http://images.askmen.com/entertainment/special_feature_300/385_tuesday-trivia-shots-you-should-never-drink-after-college_flash.jpg
-		text: down the hatch - drink the rum to cure yourself
-		exits:
-			Go back to town: tropico2
-			
-	tropico2:
-		title: The Island Paradise of Tropico
-		image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
-		text: ?
-		exits:
-			Search for cure for the Dance of the Phoenix: active2
-			
-	active2:
-		title: Looking for Allurium
-		image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
-		text: not sure
-		requirements:
-			Where do you think you can find an active ingredient: 
-				- volcano
-				- lava
-				- factory
-				- laboratory
-				- lair
-		success: hike
-		fail: tropico2
-	
-	hike:
-		title: Hiking back to the volcano
-		image: https://s-media-cache-ak0.pinimg.com/736x/14/f0/e8/14f0e8f66bf4c3a21a20bc4dcdfa7597.jpg
-		text: it's tough
-		cards: [2C,2S,3C,3S,KD]
-		boni: [Intrepid]
-		success: volcano
-		fail: tropico2
-		
-	volcano:
-		title: Trying to get into the volcano lair
-		image: http://vignette1.wikia.nocookie.net/gta-myths/images/2/2e/Lost_05.jpg/revision/latest?cb=20140806170051
-		text: |
-			Amid the ruins of El Chupacabra's base, you find
-			a secret entrance in the radio station. But you need
-			a code for the door.
-		requirements:
-			The code to get into the base: 741
-		success: tunnels
-		fail: tropico2
-		
-	tunnels:
-		title: Lost in a maze of tunnels
-		image: http://hawaiioutdoorguides.com/wp-content/uploads/2011/08/Hiking-inside-volcano-lava-tube-Hawaii.jpg
-		text: |
-			...
-			Something about Quetzalcoatl to seed stuff
-			You try to follow the scent of coconut through the tunnels.
-		boni: [Conoisseur, Stealth]
-		success: sanctum
-		fail: tropico2
-		cards:  [3C, 3S, 3D, KH, 4H]
-		
-	sanctum:
-		title: El Chupacabra's Laboratory
-		image: http://i.imgur.com/3vr58.jpg
-		exits:
-			Return to the beach with your prize: tropico2
+    cured:
+        title: Drinking the cure
+        image: http://images.askmen.com/entertainment/special_feature_300/385_tuesday-trivia-shots-you-should-never-drink-after-college_flash.jpg
+        text: down the hatch - drink the rum to cure yourself
+        exits:
+            Go back to town: tropico2
+            
+    tropico2:
+        title: The Island Paradise of Tropico
+        image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
+        text: TBD
+        exits:
+            Search for cure for the Dance of the Phoenix: active2
+            
+    active2:
+        title: Looking for Allurium
+        image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
+        text: not sure
+        requirements:
+            Where do you think you can find an active ingredient: 
+                - volcano
+                - lava
+                - factory
+                - laboratory
+                - lair
+        success: hike
+        fail: tropico2
+    
+    hike:
+        title: Hiking back to the volcano
+        image: https://s-media-cache-ak0.pinimg.com/736x/14/f0/e8/14f0e8f66bf4c3a21a20bc4dcdfa7597.jpg
+        text: it's tough
+        cards: [2C,2S,3C,3S,KD]
+        boni: [Intrepid]
+        success: volcano
+        fail: tropico2
+        
+    volcano:
+        title: Trying to get into the volcano lair
+        image: http://vignette1.wikia.nocookie.net/gta-myths/images/2/2e/Lost_05.jpg/revision/latest?cb=20140806170051
+        text: |
+            Amid the ruins of El Chupacabra's base, you find
+            a secret entrance in the radio station. But you need
+            a code for the door.
+        requirements:
+            The code to get into the base: 741
+        success: tunnels
+        fail: tropico2
+        
+    tunnels:
+        title: Lost in a maze of tunnels
+        image: http://hawaiioutdoorguides.com/wp-content/uploads/2011/08/Hiking-inside-volcano-lava-tube-Hawaii.jpg
+        text: |
+            ...
+            Something about Quetzalcoatl to seed stuff
+            You try to follow the scent of coconut through the tunnels.
+        boni: [Conoisseur, Stealth]
+        success: sanctum
+        fail: tropico2
+        cards:  [3C, 3S, 3D, KH, 4H]
+        
+    sanctum:
+        title: El Chupacabra's Laboratory
+        image: http://i.imgur.com/3vr58.jpg
+        exits:
+            Return to the beach with your prize: tropico2
