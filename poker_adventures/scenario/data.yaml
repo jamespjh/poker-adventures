@@ -10,11 +10,15 @@ rooms:
 
 	monaco:
 		title: The Casino Resort of Monaco
+		text: Cherie LaFigure's Stylish Casino
+		image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
 		exits:
 			Set sail, looking for an interesting spot to go diving: marina
 			
 	marina:
 		title: In the Marina in Monaco
+		image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
+		text: You'll nead a boat...
 		requirements:
 			The name of your yacht: [steadfast, quicksilver, coracle]
 		fail: monaco
@@ -22,8 +26,10 @@ rooms:
 	
 	search:
 		title: At sea, looking for an interesting spot to go diving
+		text: Open Water.
+		image: http://trailers.apple.com/trailers/lions_gate/open_water/images/land_image.jpg
 		requirements:
-			What are you looking for?: [ruins, temple, atlantis ]
+			What are you looking for?: [ruins, temple, atlantis, cthulhu, godzilla, kraken ]
 		fail: monaco
 		success: ruins
 		
@@ -31,7 +37,8 @@ rooms:
 		title: In the undersea ruins
 		text: |
 			you get to see something in the ruins that 
-			helps for the volcano quest
+			helps for the volcano quest actually it's about Menki.
+		image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
 		cards:  [2C,2S,3C,3S,KD]
 		boni: [Intrepid, Sporty]
 		success: temple
@@ -39,13 +46,16 @@ rooms:
 		
 	temple:
 		title: In an ancient underwater temple
+		image: http://41.media.tumblr.com/1e09e9fee3e00a89869a889b11e4fc9f/tumblr_n2ukklxnH21qjw5gto3_1280.jpg
 		requirements:
-			The name of an ancient God: [chthulu, quetzalcoatl, bigfoot, godzilla]
+			The name of an ancient God: [chthulu, quetzalcoatl, quetzlcoatl, bigfoot, godzilla]
 		success: excavation
 		fail: monaco
 
 	excavation:
 		title: Excavating the ruins
+		text: this is a big operation
+		image: http://www.waterencyclopedia.com/images/wsci_01_img0031.jpg
 		cards: [3C, 3S, 3D, KH, 4H]
 		boni: [Base, Entrepreneur]
 		success: treasure
@@ -53,6 +63,7 @@ rooms:
 		
 	treasure:
 		title: In the Tomb of Godzilla
+		image: https://emilypothast.files.wordpress.com/2008/11/gurney-dinosaur-parade.jpg
 		text: |
 			Beautiful frescos of people working alongside dinosaurs to build 
 			skyscrapers
