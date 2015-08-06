@@ -6,4 +6,5 @@ class Challenge(object):
 		self.timer = time
 		self.boni = boni
 		self.template= 'challenge'
-		
+		self.failtext="You have failed"
+		self.failcontinue="Let someone else try"

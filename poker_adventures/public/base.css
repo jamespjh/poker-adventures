@@ -12,6 +12,7 @@ body {
     background-attachment: fixed;
     background-position: center;
 	background-color: black;
+	background-size:contain;
 }
 
 a.target {
@@ -33,4 +34,8 @@ div.text-overlay p {
 
 div.text-overlay li {
 	font-size: large;
+}
+
+p#continue {
+	text-align: center;
 }

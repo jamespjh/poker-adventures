@@ -1,5 +1,5 @@
 <%inherit file="/room.mako"/>
-<h2> You have failed. </h2>
+<h2> ${c.obstacle.failtext} </h2>
 
 % if hasattr(c.obstacle, 'timer') and c.obstacle.timer:
 <div id="timings">
@@ -10,6 +10,6 @@
 </div>
 % endif
 
-<p> <a class=target href=${h.url(controller='room', room=c.obstacle.fail)}>
-	Click here to let someone else try</a>
+<p id="continue"> <a class=target href=${h.url(controller='room', room=c.obstacle.fail)}>
+	${c.obstacle.failcontinue}</a>
 </p>

@@ -85,16 +85,18 @@ rooms:
             
     bar:
         title: In the bar in Skisky
-        image: https://www.flickr.com/photos/todpolson/1512406310
+        image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: The barman is a local. Fancy a chat?
         requirements:
             What are you looking for?: [menki]
         fail: rumour
         success: trail
+        failtext: The barman doesn't know about that.
+        failcontinue: Let him ramble on.
         
     rumour:
         title: Listening to the barman
-        image: https://www.flickr.com/photos/todpolson/1512406310
+        image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
             I don't know about that, but I can tell you something else interesting.
         prompt: Listen to the barman
@@ -102,7 +104,7 @@ rooms:
         
     beachvb:
         title: Listening to the barman
-        image: https://www.flickr.com/photos/todpolson/1512406310
+        image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
             I’m looking forward to watching the World Beach Table Football later. Them costumes don’t leave much to the imagination. Starts at 9.30pm I think.
         exits:
@@ -110,7 +112,7 @@ rooms:
             
     code:
         title: Listening to the barman
-        image: https://www.flickr.com/photos/todpolson/1512406310
+        image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
             A code or chthonic number, cf numbers station Tropico 4 (eg remark that the number 741 seems to be appearing everywhere or something)
         exits:
@@ -118,7 +120,7 @@ rooms:
             
     conference:
         title: Listening to the barman
-        image: https://www.flickr.com/photos/todpolson/1512406310
+        image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
             Apparently there’s some big economic conference happening over the border. Good job we don’t have to worry about all that, as we have the wise Politburo to guide us.
         exits:
@@ -126,7 +128,7 @@ rooms:
             
     rumski:
         title: Listening to the barman
-        image: https://www.flickr.com/photos/todpolson/1512406310
+        image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
             We had a bottle of that Tropican rum in this pub once. Didn’t last long.
         exits:
@@ -155,7 +157,7 @@ rooms:
         text: |
              You’re a bit close to the border, and sensors pick you up. Your radio crackles: "Ccchhh -- this is a restricted area. What is your callsign, agent? Ccchhh Over."
         requirements:
-            Radio in a reassuring code name: [eagle, 007, hatstand, hammer, sickle]
+            Radio in a reassuring code name: [eagle, "007", hatstand, hammer, sickle]
         success: accepted
         fail: driven
         
@@ -204,7 +206,7 @@ rooms:
         image: http://www.apk20.com/image/icon-43351
         text: RUN!
         exits:
-            Head back to the ski resort: Skisky
+            Head back to the ski resort: skisky
     
     bones:
         title: Exploring the cave
@@ -212,14 +214,14 @@ rooms:
         text: |
             Get some allurium. Bigfoot's bonus
         exits:
-            Head back to the ski resort: Skisky
+            Head back to the ski resort: skisky
     
     tamed:
         title: Returning with a Yeti
         image: http://i.kinja-img.com/gawker-media/image/upload/s--mGNM_dLd--/c_fit,fl_progressive,q_80,w_636/17keuu08mrr21jpg.jpg
         text: peti
         exits:
-            Head back to the ski resort: Skisky
+            Head back to the ski resort: skisky
             
     tropico:
         title: The Island Paradise of Tropico
@@ -230,7 +232,7 @@ rooms:
             
     active:
         title: Looking for a cure
-        image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
+        image: /question.png
         text: what to do?
         requirements:
             Where do you think you can find an active ingredient: 
@@ -264,7 +266,7 @@ rooms:
             
     active2:
         title: Looking for Allurium
-        image: http://www.corbisimages.com/images/Corbis-42-18122838.jpg?size=67&uid=47fbe9e5-aa1c-42a1-9ea0-a49f8149196d
+        image: /question.png
         text: not sure
         requirements:
             Where do you think you can find an active ingredient: 
@@ -293,7 +295,7 @@ rooms:
             a secret entrance in the radio station. But you need
             a code for the door.
         requirements:
-            The code to get into the base: 741
+            The code to get into the base: "741"
         success: tunnels
         fail: tropico2
         

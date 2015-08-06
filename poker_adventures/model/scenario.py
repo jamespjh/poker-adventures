@@ -69,7 +69,9 @@ class Scenario(object):
 					roomd['success'],
 					roomd['fail'],
 					roomd['requirements'],
-					roomd.get('special',{})
+					roomd.get('special',{}),
+					roomd.get('failtext',""),
+					roomd.get('failcontinue',"")
 				)
 
 			if 'random' in roomd:
