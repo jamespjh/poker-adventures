@@ -2,6 +2,7 @@ from room import Room
 from secrets import Secrets
 from decision import Decision
 from challenge import Challenge
+from randomiser import Random
 
 import yaml, os
 		
@@ -69,6 +70,12 @@ class Scenario(object):
 					roomd['fail'],
 					roomd['requirements'],
 					roomd.get('special',{})
+				)
+
+			if 'random' in roomd:
+				obstacle = Random(
+					roomd['prompt'],
+					roomd['random']
 				)
 
 			room.add_obstacle(obstacle)

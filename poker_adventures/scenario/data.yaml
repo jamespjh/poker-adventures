@@ -123,7 +123,25 @@ rooms:
   skisky:
     title: Skisky, an Eastern Block ski resort
     exits:
-      Climb up into the mountains: glacier
+      Ask the barman for a rumour: bar
+      
+  bar:
+    title: In the bar in Skisky
+    text: |
+      The bar in Skisky is busy and full of happy apres-ski drinkers.
+      You ask the barman for a pint of rumours.
+    random: [conference, rum]
+    prompt: Listen to the Barman.
+    
+  rum:
+    title: A rumour about Rum
+    exits:
+      Go back to the slopes: skisky
+      
+  conference:
+    title: A rumour about a conference
+    exits:
+      Go back to the slopes: skisky
       
   glacier:
     title: Hiking across a glacier
