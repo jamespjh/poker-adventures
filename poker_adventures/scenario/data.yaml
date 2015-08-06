@@ -41,8 +41,20 @@ rooms:
       an ancient God.
     fail: monaco
     success: octofight
+    special:
+      chthulu: octobow
     requirements:
       "The name of an ancient God": [chthulu, quetzalcoatl, bigfoot, godzilla]
+      
+  octobow:
+    title: Worshipped by Octopi!
+    text: |
+      The runes tell you where the King of the ancient Earthfolk is entomed. 
+      But Just as you reach it, a group of Octopuses float in, looking like they're about to attack you,
+      but when you give the name of their lord Chthulu, they cease their threats
+      and bow down in worship.
+    exits:
+      "Enter the tomb": treasure
       
   octofight:
     title: Attacked by Octopi!

@@ -25,11 +25,8 @@ class RoomController(BaseController):
         return render('fail.mako')
         
     def submit(self, room):
-        for requirement, choices in c.obstacle.requirements.items():
-            if requirement not in request.params:
-                return render('fail.mako')
-            if not any(
-                [choice in request.params[requirement].lower().strip() 
-                    for choice in choices]):   
-                return render('fail.mako')
-        redirect(url(controller='room', room=c.obstacle.success, action='index'))
+        if not c.obstacle.validate(request.params):
+            return render('fail.mako')
+        redirect(url(controller='room', 
+            room=c.obstacle.direct(request.params), action='index'))
+        
