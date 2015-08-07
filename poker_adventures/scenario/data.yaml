@@ -9,7 +9,7 @@ start:
 rooms:
     monaco:
         title: The Casino Resort of Monaco
-        text: Cherie LaFigure's Stylish Casino
+        text: | Are you tired of the bright lights of Cherie LaFigure's stylish casino? Yearning for some fresh air after all those smoky gaming rooms? Perhaps a trip on the water will soothe your aching head. Or are you looking for somewhere specific?
         image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
         exits:
             Set sail, looking for an interesting spot to go diving: marina
@@ -17,7 +17,7 @@ rooms:
     marina:
         title: In the Marina in Monaco
         image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
-        text: You'll nead a boat...
+        text: | Monaco is the yachting capital of the Med, but most boat owners are not keen to share. If you want to head out to sea, you'll nead a boat you can use...
         requirements:
             The name of your yacht: [steadfast, quicksilver, coracle]
         fail: monaco
@@ -25,7 +25,8 @@ rooms:
     
     search:
         title: At sea, looking for an interesting spot to go diving
-        text: Open Water.
+        text: |
+        Well here you are, in open water. Is this a pleasure cruise or are you looking for a particularly interesting spot to go diving?
         image: http://trailers.apple.com/trailers/lions_gate/open_water/images/land_image.jpg
         requirements:
             What are you looking for?: [ruins, temple, atlantis, cthulhu, godzilla, kraken ]
@@ -34,9 +35,7 @@ rooms:
         
     ruins:
         title: In the undersea ruins
-        text: |
-            you get to see something in the ruins that 
-            helps for the volcano quest actually it's about Menki.
+        text: | Well this is all very strange. There is some strange writing carved into the rocks, that you can just make out through your diving helmet. It's talking about four ancient tribes who worshipped four Old Gods. Some of it is covered in barnacles, but you can just make out something about the beautiful sunfolk who lived in a flaming mountain, the Menki mountain giants, and the deep ones in the ocean. Do you want to venture deeper into the ruins? It looks like a tough dive.
         image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
         cards:  [2C,2S,3C,3S,KD]
         boni: [Intrepid, Sporty]
@@ -46,6 +45,7 @@ rooms:
     temple:
         title: In an ancient underwater temple
         image: http://41.media.tumblr.com/1e09e9fee3e00a89869a889b11e4fc9f/tumblr_n2ukklxnH21qjw5gto3_1280.jpg
+        text: | Everything becomes still and silent. You sense a strange aura in this place and a strange whispering enters your mind. YOU WHO DARES ENTER THIS PLACE, DO YOU KNOW MY TRUE NAME?
         requirements:
             The name of an ancient God: [chthulu, quetzalcoatl, quetzlcoatl, bigfoot, godzilla]
         success: excavation
@@ -53,7 +53,7 @@ rooms:
 
     excavation:
         title: Excavating the ruins
-        text: this is a big operation
+        text: The voice is gone and you become aware of your surroundings again. Something is glinting through a crack in the rocks beneath you - a hidden chamber perhaps? If you want to find out, you'll need to do some heavy lifting, and you'll  need to bring in some specialist equipment.
         image: http://www.waterencyclopedia.com/images/wsci_01_img0031.jpg
         cards: [3C, 3S, 3D, KH, 4H]
         boni: [Base, Entrepreneur]
@@ -63,7 +63,7 @@ rooms:
     treasure:
         title: In the Tomb of Godzilla
         image: https://emilypothast.files.wordpress.com/2008/11/gurney-dinosaur-parade.jpg
-        text: |
+        text: | What you find in the secret chamber amazes you:
             Beautiful frescos of people working alongside dinosaurs to build 
             skyscrapers
             decorate this room.
