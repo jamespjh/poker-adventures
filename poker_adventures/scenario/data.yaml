@@ -12,30 +12,39 @@ rooms:
         text: | Are you tired of the bright lights of Cherie LaFigure's stylish casino? Yearning for some fresh air after all those smoky gaming rooms? Perhaps a trip on the water will soothe your aching head. Or are you looking for somewhere specific?
         image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
         exits:
-            Set sail, looking for an interesting spot to go diving: marina
+            Head down to the Marina to look at the Yachts: marina
             
     marina:
         title: In the Marina in Monaco
+        text: |
+            You're in the docks. Monaco is the yachting capital of the Med, but most boat owners are not keen to share. If you want to head out to sea, you'll nead a boat you can use...
         image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
-        text: | Monaco is the yachting capital of the Med, but most boat owners are not keen to share. If you want to head out to sea, you'll nead a boat you can use...
         requirements:
             The name of your yacht: [steadfast, quicksilver, coracle]
         fail: monaco
         success: search
+        failtext: The harbourmaster has no record of that vessel.
+        failcontinue: Go back to the Casino for a cocktail.
     
     search:
-        title: At sea, looking for an interesting spot to go diving
+        title: At sea.
         text: |
         Well here you are, in open water. Is this a pleasure cruise or are you looking for a particularly interesting spot to go diving?
         image: http://trailers.apple.com/trailers/lions_gate/open_water/images/land_image.jpg
         requirements:
             What are you looking for?: [ruins, temple, atlantis, cthulhu, godzilla, kraken ]
         fail: monaco
+        failtext: You don't find what you're looking for.
+        failcontinue: Head back to port.
         success: ruins
         
     ruins:
         title: In the undersea ruins
-        text: | Well this is all very strange. There is some strange writing carved into the rocks, that you can just make out through your diving helmet. It's talking about four ancient tribes who worshipped four Old Gods. Some of it is covered in barnacles, but you can just make out something about the beautiful sunfolk who lived in a flaming mountain, the Menki mountain giants, and the deep ones in the ocean. Do you want to venture deeper into the ruins? It looks like a tough dive.
+        text: | 
+            You're anchored over some interesting undersea ruins.  You snorkel
+            around a bit, and it's obvious that once these ruins must have been on land. Your ship's radio is crackling, with a station on 741 kHz
+            repeating numbers... 549081, 406869021... You grab an aqualung
+            and start to search the ruins properly. Do you want to venture deeper into the ruins? It looks like a tough dive.
         image: https://co2insanity.files.wordpress.com/2010/06/underwater-ruins-1.jpg
         cards:  [2C,2S,3C,3S,KD]
         boni: [Intrepid, Sporty]
@@ -44,16 +53,25 @@ rooms:
         
     temple:
         title: In an ancient underwater temple
+        text: |
+            You find an underwater temple complex, obviously devoted to the
+            worship of forgotten gods. There is cuneiform writing carved into the rocks, that you can just make out through your diving helmet. Stragely, you find you understand it. It's talking about four ancient tribes who worshipped four Old Gods. Some of it is covered in barnacles, but you can just make out something about the beautiful sunfolk who lived in a flaming mountain, the Menki mountain giants, and the deep ones in the ocean. You see carvings of a giant lizard,
+            a flaming bird, a huge squid, and a massive ape. Who are these
+            ancient deities? 
         image: http://41.media.tumblr.com/1e09e9fee3e00a89869a889b11e4fc9f/tumblr_n2ukklxnH21qjw5gto3_1280.jpg
-        text: | Everything becomes still and silent. You sense a strange aura in this place and a strange whispering enters your mind. YOU WHO DARES ENTER THIS PLACE, DO YOU KNOW MY TRUE NAME?
         requirements:
             The name of an ancient God: [chthulu, quetzalcoatl, quetzlcoatl, bigfoot, godzilla]
         success: excavation
         fail: monaco
+        failtext: You're stuck outside the temple, and can't make any progress.
+        failcontinue: Head back to dry land.
 
     excavation:
         title: Excavating the ruins
-        text: The voice is gone and you become aware of your surroundings again. Something is glinting through a crack in the rocks beneath you - a hidden chamber perhaps? If you want to find out, you'll need to do some heavy lifting, and you'll  need to bring in some specialist equipment.
+        text: |
+            As you mention the God's name, the outer doors of the temple open. But inside, the place is ruined, filled with rubble, and daubed with
+            black graffiti. You'll need to excavate carefully if you want to learn more. It'll be a big operation, and you'll require significant
+            resources.
         image: http://www.waterencyclopedia.com/images/wsci_01_img0031.jpg
         cards: [3C, 3S, 3D, KH, 4H]
         boni: [Base, Entrepreneur]
@@ -63,13 +81,13 @@ rooms:
     treasure:
         title: In the Tomb of Godzilla
         image: https://emilypothast.files.wordpress.com/2008/11/gurney-dinosaur-parade.jpg
-        text: | What you find in the secret chamber amazes you:
-            Beautiful frescos of people working alongside dinosaurs to build 
-            skyscrapers
-            decorate this room.
+        text: | You clear the rubble, and find the inner sanctum of the temple,
+            mysteriously clear of water. What you find in the secret chamber
+            amazes you: Beautiful frescos of people working alongside dinosaurs to build skyscrapers
+            decorate this room. Cuneiform markings state that this is the
+            tomb of Godzilla.
             The dinosaurs are used like cranes, diggers, and elevators.
-            The frescos are descecrated, covered with Graffiti saying "I, the great 
-            Kraken, claim these lands 
+            The frescos are descecrated, covered with squid-ink graffiti saying "I, the great Kraken, claim these lands 
             for the waters. None shall build here again without my leave."
             There might be treasure here: tell a GM the codephrase 'Godzilla's 
             Bones'.
@@ -86,19 +104,33 @@ rooms:
     bar:
         title: In the bar in Skisky
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
-        text: The barman is a local. Fancy a chat?
+        text: |
+            The barman seems friendly. He asks if you have any questions
+            about Skisky.
         requirements:
             What are you looking for?: [menki]
+        special:
+            yeti: yetibar
         fail: rumour
         success: trail
         failtext: The barman doesn't know about that.
         failcontinue: Let him ramble on.
         
+    yetibar:
+        title: Listening to the barman
+        image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
+        text: |
+            The barman twitches a moment, looking curiously at you. 
+            "Interesting you should ask about that... No, we don't have
+            Yeti here, that's over in Tibet." So, what'll you have?
+        exits:
+            Have a drink, then head for the slopes: skisky 
+        
     rumour:
         title: Listening to the barman
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
-            I don't know about that, but I can tell you something else interesting.
+            '"I don't know about that", says the barman, "but I can tell you something else interesting..."'
         prompt: Listen to the barman
         random: [beachvb, code, conference, rumski]
         
@@ -106,7 +138,7 @@ rooms:
         title: Listening to the barman
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
-            I’m looking forward to watching the World Beach Table Football later. Them costumes don’t leave much to the imagination. Starts at 9.30pm I think.
+            He says: "I’m looking forward to watching the World Beach Table Football later, live from Tropico. Them costumes don’t leave much to the imagination. Starts at 9.30pm I think."
         exits:
             Go back to the ski slopes: skisky
             
@@ -114,6 +146,10 @@ rooms:
         title: Listening to the barman
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
+            He says "Have you listened to CU741FM? Interesting radio station...
+            Comes from Tropico I think. Those Calpyso tunes with words replaced
+            by numbers sure are weird. Catchy, but weird..." He sings:
+            549081, 406869021, 301489944561
             A code or chthonic number, cf numbers station Tropico 4 (eg remark that the number 741 seems to be appearing everywhere or something)
         exits:
             Go back to the ski slopes: skisky
