@@ -186,8 +186,9 @@ rooms:
     tracking:
         title: On the trail of the Menki
         image: https://markerhunter.files.wordpress.com/2010/02/manassas-14-feb-10-004.jpg
-        text: Sure enough you can see some large footprints in the snow. Very large. Someone wearing big ski boots perhaps? Very big ski boots? Or something else...
-        You can try to follow the tracks, though it's difficult now that fresh snow is falling.
+        text: |
+            Sure enough you can see some large footprints in the snow. Very large. Someone wearing big ski boots perhaps? Very big ski boots? Or something else...
+            You can try to follow the tracks, though it's difficult now that fresh snow is falling.
         cards:  [2C,2S,3C,3S,KD]
         boni: [Stealth, Animals]
         success: border
@@ -206,21 +207,24 @@ rooms:
     driven:
         title: Fleeing the guards
         image: http://www.globaltimes.cn/Portals/0/attachment/2011/07a46089-440c-4e25-b926-a1684c1d8212.jpeg
-        text: Oops, that didn't seem to do the trick. You can hear dogs barking, and they sound like hungry dogs. In fact, they are getting much closer... time for a tactical retreat!
+        text: |
+            Oops, that didn't seem to do the trick. You can hear dogs barking, and they sound like hungry dogs. In fact, they are getting much closer... time for a tactical retreat!
         exits:
             Head back to the ski resort: Skisky
     
     accepted:
         title: On the trail of the Menki
         image: http://www.themoscowtimes.com/upload/iblock/e9c/fur.jpg
-        text: Up ahead you can make out a cave emerging from the blizzard. The tracks seem to lead inside. It's dark and you can't see much, but there are strange noises emanating from the cavern.
+        text: |
+            Up ahead you can make out a cave emerging from the blizzard. The tracks seem to lead inside. It's dark and you can't see much, but there are strange noises emanating from the cavern.
         exits:
             Enter the cave: cave
             
     cave:
         title: In the Yeti cave
         image: http://img08.deviantart.net/9c81/i/2012/034/b/9/deeper_inside_shadowtooth_cave_by_gregg4x-d4okclg.jpg
-        text: You have found the home of the Menki, reclusive but furry mountain giants, with very large claws and teeth. One turns towards you growling, and suddenly your heart starts beating very fast. You make a snap decision:
+        text: |
+            You have found the home of the Menki, reclusive but furry mountain giants, with very large claws and teeth. One turns towards you growling, and suddenly your heart starts beating very fast. You make a snap decision:
         exits:
             Fight the Menki: fight
             Try to tame the Menki: tame
@@ -237,7 +241,8 @@ rooms:
     fight:
         title: Fighting the Menki
         image: http://magazin.amboss-mag.de/wp-content/uploads/2011/12/203091_103_snowbeast_scebig_02.jpg
-        text: Maybe this trip was not such a great idea, the Menki falls upon you snarling and gnashing its teeth, its giant paws outstretched with their sharp glinting claws.
+        text: |
+            Maybe this trip was not such a great idea, the Menki falls upon you snarling and gnashing its teeth, its giant paws outstretched with their sharp glinting claws.
         cards: [3C, 3S, 3D, KH, 4H]
         boni: [Violence]
         success: bones
@@ -253,7 +258,8 @@ rooms:
     bones:
         title: Exploring the cave
         image: https://s-media-cache-ak0.pinimg.com/736x/ab/77/0c/ab770c4d084f3225d2e1a97f2ac0e988.jpg
-        text: | Phew! That was close. If you hadn't dodged that last swipe from the Menki claws, you'd have been a goner for sure. The Menki lies defeated before you. But wait, is that something glinting beneath its fur? And what is that strange coconut smell?
+        text: | 
+            Phew! That was close. If you hadn't dodged that last swipe from the Menki claws, you'd have been a goner for sure. The Menki lies defeated before you. But wait, is that something glinting beneath its fur? And what is that strange coconut smell?
             There might be treasure here: tell a GM the codephrase 'Bigfoot's bonus'
         exits:
             Head back to the ski resort: skisky
@@ -261,8 +267,9 @@ rooms:
     tamed:
         title: Returning with a Yeti
         image: http://i.kinja-img.com/gawker-media/image/upload/s--mGNM_dLd--/c_fit,fl_progressive,q_80,w_636/17keuu08mrr21jpg.jpg
-        text: You stroke the gentle giant's warm fur and it purrs contentedly. You have earnt the title 'Menki whisperer', and have a devoted companion who will follow you anywhere. Perhaps you should give it (him? her?) a name.
-        See the GMs with the codephrase 'Bigfoot's Baby'
+        text: |
+            You stroke the gentle giant's warm fur and it purrs contentedly. You have earnt the title 'Menki whisperer', and have a devoted companion who will follow you anywhere. Perhaps you should give it (him? her?) a name.
+            See the GMs with the codephrase 'Bigfoot's Baby'
         exits:
             Head back to the ski resort: skisky
             
