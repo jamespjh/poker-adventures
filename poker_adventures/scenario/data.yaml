@@ -363,6 +363,8 @@ rooms:
     sanctum:
         title: El Chupacabra's Laboratory
         image: http://i.imgur.com/3vr58.jpg
-        text:  | You have reached the inner sanctum
+        text:  | You have reached the inner sanctum, El Chupacabra's lair and the heart of the volcano. The chamber is think with the heady scent of cocounut and also a golden haze hangs heavy in the air.
+        
+        There might be treasure here: tell a GM the codephrase 'Phoenix Prize'
         exits:
             Return to the beach with your prize: tropico2
