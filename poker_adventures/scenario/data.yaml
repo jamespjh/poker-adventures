@@ -106,7 +106,7 @@ rooms:
         title: In the bar in Skisky
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
-            The barman seems friendly. He asks if you have any questions
+            The barman seems friendly. "Greetings Comrade, and welcome to Skisky. Do you have any questions about our village?" 
             about Skisky.
         requirements:
             What are you looking for?: [menki]
@@ -131,7 +131,7 @@ rooms:
         title: Listening to the barman
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
-            '"I don't know about that", says the barman, "but I can tell you something else interesting..."'
+            '"I don't know about that, Comrade", says the barman, "but I can tell you something else interesting..."'
         prompt: Listen to the barman
         random: [beachvb, code, conference, rumski]
         
@@ -147,7 +147,7 @@ rooms:
         title: Listening to the barman
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
-            He says "Have you listened to CU741FM? Interesting radio station...
+            He says "Have you listened to CU741FM, Comrade? Interesting radio station...
             Comes from Tropico I think. Those Calpyso tunes with words replaced
             by numbers sure are weird. Catchy, but weird..." He sings:
             549081, 406869021, 301489944561...
@@ -158,7 +158,7 @@ rooms:
         title: Listening to the barman
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
-            Apparently there’s some big economic conference happening over the border. Good job we don’t have to worry about all that, as we have the wise Politburo to guide us.
+            Apparently there’s some big economic conference happening over the border, Comrade. Good job we don’t have to worry about all that, as we have the wise Politburo to guide us. Don't you agree?
         exits:
             Go back to the ski slopes: skisky
             
@@ -166,7 +166,7 @@ rooms:
         title: Listening to the barman
         image: http://c1.staticflickr.com/3/2063/1512406310_6bf6630da7.jpg
         text: |
-            We had a bottle of that Tropican rum in this pub once. Didn’t last long.
+            We had a bottle of that Tropican rum in this pub once, Comrade. Didn’t last long.
         exits:
             Go back to the ski slopes: skisky
         
@@ -174,7 +174,7 @@ rooms:
         title: In the back room of the bar
         text: |
             The barman is surprised: "Aha, I see you've paid attention to the 
-            local folklore. That's so nice, most folk just ski and drink.
+            local folklore, Comrade. That's so nice, most folk just ski and drink.
             You know, I can tell you where they were last seen!" If you head
             out to the bottom of black run 14, there's a side-trail, they
             often go there to pick snow-berries.
@@ -186,7 +186,8 @@ rooms:
     tracking:
         title: On the trail of the Menki
         image: https://markerhunter.files.wordpress.com/2010/02/manassas-14-feb-10-004.jpg
-        text: it's hard
+        text: Sure enough you can see some large footprints in the snow. Very large. Someone wearing big ski boots perhaps? Very big ski boots? Or something else...
+        You can try to follow the tracks, though it's difficult now that fresh snow is falling.
         cards:  [2C,2S,3C,3S,KD]
         boni: [Stealth, Animals]
         success: border
@@ -205,29 +206,29 @@ rooms:
     driven:
         title: Fleeing the guards
         image: http://www.globaltimes.cn/Portals/0/attachment/2011/07a46089-440c-4e25-b926-a1684c1d8212.jpeg
-        text: oops
+        text: Oops, that didn't seem to do the trick. You can hear dogs barking, and they sound like hungry dogs. In fact, they are getting much closer... time for a tactical retreat!
         exits:
             Head back to the ski resort: Skisky
     
     accepted:
         title: On the trail of the Menki
         image: http://www.themoscowtimes.com/upload/iblock/e9c/fur.jpg
-        text: it's dark and there are strange noises
+        text: Up ahead you can make out a cave emerging from the blizzard. The tracks seem to lead inside. It's dark and you can't see much, but there are strange noises emanating from the cavern.
         exits:
             Enter the cave: cave
             
     cave:
         title: In the Yeti cave
         image: http://img08.deviantart.net/9c81/i/2012/034/b/9/deeper_inside_shadowtooth_cave_by_gregg4x-d4okclg.jpg
-        text: decide
+        text: You have found the home of the Menki, reclusive but furry mountain giants, with very large claws and teeth. One turns towards you growling, and suddenly your heart starts beating very fast. You make a snap decision:
         exits:
             Fight the Menki: fight
-            Tame the Menki: tame
+            Try to tame the Menki: tame
             
     tame:
         title: Befriending the Menki
         image: https://nose4news.files.wordpress.com/2009/03/yeti2.jpg?w=500
-        text: here menki
+        text: Here pretty Menki, here Menki Menki Menki...
         cards: [3C, 3S, 3D, KH, 4H]
         boni: [Animals]
         success: tamed
@@ -236,7 +237,7 @@ rooms:
     fight:
         title: Fighting the Menki
         image: http://magazin.amboss-mag.de/wp-content/uploads/2011/12/203091_103_snowbeast_scebig_02.jpg
-        text: maybe this was not such a great idea!
+        text: Maybe this trip was not such a great idea, the Menki falls upon you snarling and gnashing its teeth, its giant paws outstretched with their sharp glinting claws.
         cards: [3C, 3S, 3D, KH, 4H]
         boni: [Violence]
         success: bones
@@ -252,15 +253,16 @@ rooms:
     bones:
         title: Exploring the cave
         image: https://s-media-cache-ak0.pinimg.com/736x/ab/77/0c/ab770c4d084f3225d2e1a97f2ac0e988.jpg
-        text: |
-            Get some allurium. Bigfoot's bonus
+        text: | Phew! That was close. If you hadn't dodged that last swipe from the Menki claws, you'd have been a goner for sure. The Menki lies defeated before you. But wait, is that something glinting beneath its fur? And what is that strange coconut smell?
+            There might be treasure here: tell a GM the codephrase 'Bigfoot's bonus'
         exits:
             Head back to the ski resort: skisky
     
     tamed:
         title: Returning with a Yeti
         image: http://i.kinja-img.com/gawker-media/image/upload/s--mGNM_dLd--/c_fit,fl_progressive,q_80,w_636/17keuu08mrr21jpg.jpg
-        text: peti
+        text: You stroke the gentle giant's warm fur and it purrs contentedly. You have earnt the title 'Menki whisperer', and have a devoted companion who will follow you anywhere. Perhaps you should give it (him? her?) a name.
+        See the GMs with the codephrase 'Bigfoot's Baby'
         exits:
             Head back to the ski resort: skisky
             
