@@ -82,7 +82,8 @@ rooms:
     treasure:
         title: In the Tomb of Godzilla
         image: https://emilypothast.files.wordpress.com/2008/11/gurney-dinosaur-parade.jpg
-        text: | You clear the rubble, and find the inner sanctum of the temple,
+        text: | 
+            You clear the rubble, and find the inner sanctum of the temple,
             mysteriously clear of water. What you find in the secret chamber
             amazes you: Beautiful frescos of people working alongside dinosaurs to build skyscrapers
             decorate this room. Cuneiform markings state that this is the
@@ -278,7 +279,7 @@ rooms:
         image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
         text: Oh dear, Tropico seems to be quarantined due to an outbreak of some kind of illness, known as Dance of the Phoenix. It seems to be connected to eruptions of the local volcano and it's highly contagious! Do you think you might have a cure?
         exits:
-            Search for cure an active ingredient: active
+            Search an active ingredient for the cure: active
             
     active:
         title: Looking for a cure
@@ -294,7 +295,8 @@ rooms:
     manufacture:
         title: Mass-producing the cure
         image: http://www.rumgallery.com/_Media/bottling_rumbar_rum_at.jpeg
-        text: | Taking a sip of the coconut rum makes you feel better for a while, but to cure the disease you really think you'd need to produce a concentrated version. That's going to need some serious facilities as well as a discriminating palate.
+        text: | 
+            Taking a sip of the coconut rum makes you feel better for a while, but to cure the disease you really think you'd need to produce a concentrated version. That's going to need some serious facilities as well as a discriminating palate.
             ...
         cards: [3C, 3S, 3D, KH, 4H]
         boni: [Base, Entrepreneur, Conoisseur]
@@ -311,9 +313,11 @@ rooms:
     tropico2:
         title: The Island Paradise of Tropico
         image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
-        text: TBD
+        text: |
+            Having cured the Dance Of the Phonix, you're relaxing on the beach.
+            But you wonder if there's more to discover.
         exits:
-            Search for cure for the Dance of the Phoenix: active2
+            Leave the beach and go to work: active2
             
     active2:
         title: Looking for Allurium
@@ -353,7 +357,8 @@ rooms:
     tunnels:
         title: Lost in a maze of tunnels
         image: http://hawaiioutdoorguides.com/wp-content/uploads/2011/08/Hiking-inside-volcano-lava-tube-Hawaii.jpg
-        text: | Inside the volcano, there is a maze of tunnels, with a distinct coconut smell arising from the beautiful golden lava, which bubbles through the tubes and retorts of a secret laboratory. The walls are covered with the scrawls of a crazy scientist, the insane ravings of a madman about a phoenix god Quetzalcoatl and her Kraken enemy.
+        text: | 
+            Inside the volcano, there is a maze of tunnels, with a distinct coconut smell arising from the beautiful golden lava, which bubbles through the tubes and retorts of a secret laboratory. The walls are covered with the scrawls of a crazy scientist, the insane ravings of a madman about a phoenix god Quetzalcoatl and her Kraken enemy.
             You try to follow the scent of coconut through the tunnels as it becomes stronger.
         boni: [Conoisseur, Stealth]
         success: sanctum
@@ -363,7 +368,8 @@ rooms:
     sanctum:
         title: El Chupacabra's Laboratory
         image: http://i.imgur.com/3vr58.jpg
-        text:  | You have reached the inner sanctum, El Chupacabra's lair and the heart of the volcano. The chamber is think with the heady scent of cocounut and also a golden haze hangs heavy in the air.
+        text: | 
+            You have reached the inner sanctum, El Chupacabra's lair and the heart of the volcano. The chamber is think with the heady scent of cocounut and also a golden haze hangs heavy in the air.
         
         There might be treasure here: tell a GM the codephrase 'Phoenix Prize'
         exits:
