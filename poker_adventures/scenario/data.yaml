@@ -9,7 +9,8 @@ start:
 rooms:
     monaco:
         title: The Casino Resort of Monaco
-        text: | Are you tired of the bright lights of Cherie LaFigure's stylish casino? Yearning for some fresh air after all those smoky gaming rooms? Perhaps a trip on the water will soothe your aching head. Or are you looking for somewhere specific?
+        text: | 
+            Are you tired of the bright lights of Cherie LaFigure's stylish casino? Yearning for some fresh air after all those smoky gaming rooms? Perhaps a trip on the water will soothe your aching head. Or are you looking for somewhere specific?
         image: http://www.estatenetfrance.com/blog/wp-content/uploads/2014/05/monaco-night1.jpg
         exits:
             Head down to the Marina to look at the Yachts: marina
@@ -17,7 +18,7 @@ rooms:
     marina:
         title: In the Marina in Monaco
         text: |
-            You're in the docks. Monaco is the yachting capital of the Med, but most boat owners are not keen to share. If you want to head out to sea, you'll nead a boat you can use...
+            You're in the marina. Monaco is the yachting capital of the Med, but most boat owners are not keen to share. If you want to head out to sea, you'll nead a boat you can use...
         image: http://www.charterworld.com/images/yachts/45m%20Bilgin%20Yacht%20Tatiana%20-%20Exterior%20desinged%20by%20Joachim%20Kinder.jpg
         requirements:
             The name of your yacht: [steadfast, quicksilver, coracle]
@@ -29,7 +30,7 @@ rooms:
     search:
         title: At sea.
         text: |
-        Well here you are, in open water. Is this a pleasure cruise or are you looking for a particularly interesting spot to go diving?
+            Well here you are, in open water. Is this a pleasure cruise or are you looking for a particularly interesting spot to go diving?
         image: http://trailers.apple.com/trailers/lions_gate/open_water/images/land_image.jpg
         requirements:
             What are you looking for?: [ruins, temple, atlantis, cthulhu, godzilla, kraken ]
@@ -149,8 +150,7 @@ rooms:
             He says "Have you listened to CU741FM? Interesting radio station...
             Comes from Tropico I think. Those Calpyso tunes with words replaced
             by numbers sure are weird. Catchy, but weird..." He sings:
-            549081, 406869021, 301489944561
-            A code or chthonic number, cf numbers station Tropico 4 (eg remark that the number 741 seems to be appearing everywhere or something)
+            549081, 406869021, 301489944561...
         exits:
             Go back to the ski slopes: skisky
             
@@ -172,7 +172,12 @@ rooms:
         
     trail:
         title: In the back room of the bar
-        text: oh you know about the Menki! Tells you where they were last seen.
+        text: |
+            The barman is surprised: "Aha, I see you've paid attention to the 
+            local folklore. That's so nice, most folk just ski and drink.
+            You know, I can tell you where they were last seen!" If you head
+            out to the bottom of black run 14, there's a side-trail, they
+            often go there to pick snow-berries.
         image: http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/1/4/1325694461242/landscape-covered-in-snow-001.jpg
         exits:
             Head out to try to find the Menki: tracking
