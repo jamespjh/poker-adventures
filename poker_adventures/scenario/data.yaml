@@ -318,7 +318,7 @@ rooms:
     active2:
         title: Looking for Allurium
         image: /question.png
-        text: not sure
+        text: It seems that the Eye of the Phoenix is quiet for now. Although you can still hear a few rumblings from within the volcano, now might be a good time to explore the area, if you are in search of something special.
         requirements:
             Where do you think you can find an active ingredient: 
                 - volcano
@@ -332,7 +332,7 @@ rooms:
     hike:
         title: Hiking back to the volcano
         image: https://s-media-cache-ak0.pinimg.com/736x/14/f0/e8/14f0e8f66bf4c3a21a20bc4dcdfa7597.jpg
-        text: it's tough
+        text: It's a very tough hike up the sides of the volcano, still covered in rivulets of smoking lava from the recent eruption. Will you make it?
         cards: [2C,2S,3C,3S,KD]
         boni: [Intrepid]
         success: volcano
@@ -343,7 +343,7 @@ rooms:
         image: http://vignette1.wikia.nocookie.net/gta-myths/images/2/2e/Lost_05.jpg/revision/latest?cb=20140806170051
         text: |
             Amid the ruins of El Chupacabra's base, you find
-            a secret entrance in the radio station. But you need
+            a secret entrance through the back door of his radio station. It's locked, and looks too sturdy to break, but there;s a keypad where you could enter
             a code for the door.
         requirements:
             The code to get into the base: "741"
@@ -353,10 +353,8 @@ rooms:
     tunnels:
         title: Lost in a maze of tunnels
         image: http://hawaiioutdoorguides.com/wp-content/uploads/2011/08/Hiking-inside-volcano-lava-tube-Hawaii.jpg
-        text: |
-            ...
-            Something about Quetzalcoatl to seed stuff
-            You try to follow the scent of coconut through the tunnels.
+        text: | Inside the volcano, there is a maze of tunnels, with a distinct coconut smell arising from the beautiful golden lava, which bubbles through the tubes and retorts of a secret laboratory. The walls are covered with the scrawls of a crazy scientist, the insane ravings of a madman about a phoenix god Quetzalcoatl and her Kraken enemy.
+            You try to follow the scent of coconut through the tunnels as it becomes stronger.
         boni: [Conoisseur, Stealth]
         success: sanctum
         fail: tropico2
@@ -365,5 +363,6 @@ rooms:
     sanctum:
         title: El Chupacabra's Laboratory
         image: http://i.imgur.com/3vr58.jpg
+        text:  | You have reached the inner sanctum
         exits:
             Return to the beach with your prize: tropico2
