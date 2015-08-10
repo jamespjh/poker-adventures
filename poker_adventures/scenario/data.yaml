@@ -349,7 +349,7 @@ rooms:
         image: http://vignette1.wikia.nocookie.net/gta-myths/images/2/2e/Lost_05.jpg/revision/latest?cb=20140806170051
         text: |
             Amid the ruins of El Chupacabra's base, you find
-            a secret entrance through the back door of his radio station. It's locked, and looks too sturdy to break, but there;s a keypad where you could enter
+            a secret entrance through the back door of his radio station. It's locked, and looks too sturdy to break, but there's a keypad where you could enter
             a code for the door.
         requirements:
             The code to get into the base: "741"
