@@ -33,7 +33,7 @@ rooms:
             Well here you are, in open water. Is this a pleasure cruise or are you looking for a particularly interesting spot to go diving?
         image: http://trailers.apple.com/trailers/lions_gate/open_water/images/land_image.jpg
         requirements:
-            What are you looking for?: [ruins, temple, atlantis, cthulhu, godzilla, kraken ]
+            What are you looking for?: [ruins, temple, atlantis, chthulu, cthulu, cthulhu, chthulhu, cthulu, godzilla, kraken ]
         fail: monaco
         failtext: You don't find what you're looking for.
         failcontinue: Head back to port.
@@ -61,7 +61,7 @@ rooms:
             ancient deities? 
         image: http://41.media.tumblr.com/1e09e9fee3e00a89869a889b11e4fc9f/tumblr_n2ukklxnH21qjw5gto3_1280.jpg
         requirements:
-            The name of an ancient God: [chthulu, quetzalcoatl, quetzlcoatl, bigfoot, godzilla]
+            The name of an ancient God: [chthulu, cthulu, cthulhu, chthulhu, quetzalcoatl, quetzlcoatl, bigfoot, godzilla]
         success: excavation
         fail: monaco
         failtext: You're stuck outside the temple, and can't make any progress.
