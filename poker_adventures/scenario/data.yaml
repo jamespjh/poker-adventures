@@ -6,7 +6,7 @@ start:
   - tropico
   - skisky
   
-rooms:
+rooms:ha
     monaco:
         title: The Casino Resort of Monaco
         text: | 
@@ -279,7 +279,7 @@ rooms:
         image: http://bittenbythetravelbug.com/wp-content/uploads/2012/07/PostImage_VirginHolidays_TropicalIsland.jpg
         text: Oh dear, Tropico seems to be quarantined due to an outbreak of some kind of illness, known as Dance of the Phoenix. It seems to be connected to eruptions of the local volcano and it's highly contagious! Do you think you might have a cure?
         exits:
-            Search an active ingredient for the cure: active
+            Search for an active ingredient for the cure: active
             
     active:
         title: Looking for a cure
@@ -306,7 +306,9 @@ rooms:
     cured:
         title: Drinking the cure
         image: http://images.askmen.com/entertainment/special_feature_300/385_tuesday-trivia-shots-you-should-never-drink-after-college_flash.jpg
-        text: Down the hatch!
+        text: |
+          Down the hatch!
+          Everyone with the disease must now drink a shot of coconut rum to be cured.
         exits:
             Go back to town: tropico2
             
