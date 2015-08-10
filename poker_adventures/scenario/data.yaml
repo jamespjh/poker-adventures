@@ -6,7 +6,7 @@ start:
   - tropico
   - skisky
   
-rooms:ha
+rooms:
     monaco:
         title: The Casino Resort of Monaco
         text: | 
